@@ -1,0 +1,145 @@
+@import "_reset";
+@import "_mixin";
+@import "_inc";
+
+@include sub-header();
+
+.sub-con{
+    .page-view{
+        @include pg();
+        }
+
+        .con-box{
+            @include sub-width-auto();
+            margin-bottom: 100px;
+            .sub-title{
+                @include sub-title();
+                background-image: url("../img/deco-guide.svg");
+                background-repeat: no-repeat;
+                animation: qwe 2s forwards;
+                background-position: 180% -300%;
+
+            }
+            @keyframes qwe {
+                0%{
+                    background-position: 180% -300%;
+                }
+
+                100%{
+                    background-position: 90% -300%;
+                }   
+            }
+
+            .btn-box{
+
+                @include con-box-margin-b();
+                text-align: center;
+                .btn1{
+                    font-weight: bold;
+                    display: inline-block;
+                    padding: 20px 26px;
+                    background-color: white;
+                    border: 1px solid #1f5153;
+                    transition: all 0.2s ease;
+                    color: #1f5153;
+                    &:hover{
+                        color: white;
+                        background-color: #1f5153;
+                    }
+                }
+            }
+
+            .sub-con-box1{
+                @include con-box-margin-b();
+                border-top: 2px solid black;
+                ul{
+                    li{
+                        display: flex;
+                        border-bottom: 1px solid #e0e0e0;
+                        padding: 40px 0;
+                        .left{
+                            width: 620px;
+                            height: 350px;
+                            img{
+                                display: block;
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+
+                        .right{
+                            position: relative;
+                            .inner{
+                                width: 400px;
+                                position: absolute;
+                                top: 50%;
+                                left: 60px;
+                                transform: translateY(-50%);
+                                p{
+                                    font-size: 24px;
+                                    font-weight: bold;
+                                    margin-bottom: 20px;
+                                }
+
+                                dl{
+                                    line-height: 2.5;
+                                    dt{
+                                        float: left;
+                                        width: 50px;
+                                        font-weight: bold;
+                                        color: #333;
+                                    }
+
+                                    dd{
+                                        color: #333;
+                                        font-weight: 500;
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                }
+
+                .btn-down {
+                    margin-top: 16px;
+                    .inner{
+                        @include flex(flex-end,center);
+                        a{
+                            display: block;
+                            padding: 15px;
+                            background-color: white;
+                            border: 1px solid #1f5153;
+                            transition: all 0.3s ease;
+                            span{
+                                font-size: 14px;
+                                color: #333;
+                                font-weight: 500;
+                                &::before{
+                                    content: url('../img/ic-download-black-24-dp.png');
+                                    margin-right: 5px;
+                                    background-repeat: no-repeat;
+                                    background-position: center;
+                                    vertical-align: -2px;
+                                }
+                            }
+                            &:nth-of-type(1){
+                                margin-right: 20px
+                            }
+
+                            &:hover{
+                                background-color: #1f5153;
+                                span{
+                                    color: white;
+                                    &::before{
+                                        content: url('../img/ic-donwload-white-24-dp.png');
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }

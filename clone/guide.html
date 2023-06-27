@@ -1,42 +1,124 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/guide.css">
+    <link rel="stylesheet" href="css/guide.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <title>Document</title>
 </head>
+
 <body>
-
     <div class="sub-con">
-        <h2 class="sub-title">관람안내</h2>
+
+    <div class="page-view">
+        <ul class="pg1">
+            <li class="home"><a href="index.html"><img src="img/ic-home-black-18-dp.svg" alt="d"></a></li>
+            <li class="qa"><p>이용안내</p>
+            <ul class="pg2">
+                <li><a href="#">전시</a></li>
+                <li><a href="#">교육·행사</a></li>
+                <li><a href="#">소장품</a></li>
+                <li><a href="#">학술·출판</a></li>
+                <li><a href="#">소식·참여</a></li>
+            </ul></li>
+            <li class="qa"><p>관람안내</p>
+                <ul class="pg2">    
+                    <li><a href="#">단체관람</a></li>
+                    <li><a href="#">시설안내</a></li>
+                    <li><a href="#">뮤지엄숍</a></li>
+                    <li><a href="#">대관안내</a></li>
+                    <li><a href="#">오시는길</a></li>
+                </ul></li>
+        </ul>
+    </div>
+
+        <div class="con-box">
+            <h2 class="sub-title">관람안내</h2>
         <div class="sub-con-box1">
-            <div>dd</div>
-            <div>ss</div>
-            <div>dd</div>
-            <div>ss</div>
-
+            <h3>관람시간</h3>
+            <table>
+                <tr>
+                    <th>관람시간</th>
+                    <td class="strong">10:00 - 18:00<br>
+                    <div class="point">(입장마감 17:20)</div></td>
+                </tr>
+                <tr>
+                    <th>휴관일</th>
+                    <td>매주 월요일, 매년 1월1일, 설날 및 추석 당일</td>
+                </tr>
+                <tr>
+                    <th>관람료</th>
+                    <td>무료</td>
+                </tr>
+                <tr>
+                    <th>안내사항</th>
+                    <td>- 경기도박물관은 「코로나19 방역 강화를 위한 마스크 착용 방역지침 준수 명령」에 따라<br>
+                        2023년 1월 30일부터 실내 마스크 착용 의무를 권고로 전환합니다.</td>
+                </tr>
+            </table>
         </div>
+
         <div class="sub-con-box2">
-
+            <h3>관람시간</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>구분</th>
+                        <th>1회</th>
+                        <th>2회</th>
+                        <th>3회</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>안내시간</th>
+                        <td>11:00</td>
+                        <td>13:30</td>
+                        <td>15:00</td>
+                    </tr>
+                    <tr>
+                        <th>인원 / 시간</th>
+                        <td colspan="3">40분 내외 소요 / 30명 이내</td>
+                    </tr>
+                    <tr>
+                        <th>참가방법</th>
+                        <td colspan="3">별도 신청 없이 지정시간에 안내데스크 앞에 모여 진행</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <div class="sub-con box3">
 
+    <div class="sub-con-box3">
+        <h3>관람 시 유의사항</h3>
+        <ul>
+            <li>음식물 반입과 안내견 이외의 애완동물의 출입은 금지되어 있습니다.</li>
+            <li>전시실 입장 전에, 휴대전화는 전원을 꺼주시거나 진동으로 전환하여 주십시오.</li>
+            <li>전시물에 손을 대거나 손상을 입힐 수 있는 행위는 절대 삼가해 주십시오.</li>
+            <li>플래시/삼각대 등을 이용한 촬영과 상업적 용도를 위한 촬영은 금지되어 있습니다.</li>
+            <li>야외 관람로에서는 자전거, 킥보드, 인라인스케이트, 브레이드 등을 이용할 수 없습니다.</li>
+        </ul>
+    </div>
         </div>
     </div>
 
 
     <script>
         $(function () {
-            $('body').prepend('<div id="header"></div>')
-            $('body').append('<div id="footer"></div>')
-            $("#header").load("header.html");
-            $("#footer").load("footer.html");
+            $('body').prepend('<header class="header"></header>')
+            $('body').append('<footer class="footer"></footer>')
+            $(".header").load("header.html");
+            $(".footer").load("footer.html");
         });
     </script>
+
+
+
+
 </body>
+
 </html>

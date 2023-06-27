@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/coronation-guide.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div class="sub-con">
+        <div class="page-view">
+            <ul class="pg1">
+                <li class="home"><a href="index.html"><img src="img/ic-home-black-18-dp.svg" alt="d"></a></li>
+                <li class="qa"><p>이용안내</p>
+                <ul class="pg2">
+                    <li><a href="#">전시</a></li>
+                    <li><a href="#">교육·행사</a></li>
+                    <li><a href="#">소장품</a></li>
+                    <li><a href="#">학술·출판</a></li>
+                    <li><a href="#">소식·참여</a></li>
+                </ul></li>
+                <li class="qa"><p>대관안내</p>
+                    <ul class="pg2">    
+                        <li><a href="#">단체관람</a></li>
+                        <li><a href="#">시설안내</a></li>
+                        <li><a href="#">뮤지엄숍</a></li>
+                        <li><a href="#">대관안내</a></li>
+                        <li><a href="#">오시는길</a></li>
+                    </ul></li>
+            </ul>
+        </div>
+
+        <div class="con-box">
+            <h2 class="sub-title">대관안내</h2>
+            <div class="btn-box">
+                <a class="btn1" href="https://members.ggcf.kr/facilities" target="_blank">대관신청 예약</a>
+            </div>
+
+            <div class="sub-con-box1">
+                <ul>
+                    <li>
+                        <div class="left">
+                            <img src="img/img-sub-05-01.jpg" alt="d">
+                        </div>
+
+                        <div class="right">
+                            <div class="inner">
+                                <p>강당</p>
+                                <dl>
+                                    <dt>위치</dt>
+                                    <dd>1층</dd>
+                                </dl>
+                                <dl>
+                                    <dt>객석</dt>
+                                    <dd>일반객석 298석, 장애인석 4석</dd>
+                                </dl>
+                                <dl>
+                                    <dt>면적</dt>
+                                    <dd>9m×3.8m~5m</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="left">
+                            <img src="img/img-sub-05-02.jpg" alt="d">
+                        </div>
+
+                        <div class="right">
+                            <div class="inner">
+                                <p>야외공연장</p>
+                                <dl>
+                                    <dt>위치</dt>
+                                    <dd>야외</dd>
+                                </dl>
+                                <dl>
+                                    <dt>객석</dt>
+                                    <dd>409석</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="left">
+                            <img src="img/img-sub-05-03.jpg" alt="d">
+                        </div>
+
+                        <div class="right">
+                            <div class="inner">
+                                <p>교육실</p>
+                                <dl>
+                                    <dt>위치</dt>
+                                    <dd>1층</dd>
+                                </dl>
+                                <dl>
+                                    <dt>객석</dt>
+                                    <dd>50석</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="left">
+                            <img src="img/img-sub-05-04.jpg" alt="d">
+                        </div>
+
+                        <div class="right">
+                            <div class="inner">
+                                <p>회의실</p>
+                                <dl>
+                                    <dt>위치</dt>
+                                    <dd>1층</dd>
+                                </dl>
+                                <dl>
+                                    <dt>객석</dt>
+                                    <dd> 40석</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="btn-down">
+                    <div class="inner">
+                        <a href="#">
+                            <span>
+                                소속기관운영규정
+                            </span>
+                        </a>
+
+                        <a href="#">
+                            <span>
+                                경기도박물관운영규칙
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        $(function () {
+            $('body').prepend('<header class="header"></header>')
+            $('body').append('<footer class="footer"></footer>')
+            $(".header").load("header.html");
+            $(".footer").load("footer.html");
+        });
+    </script>
+    
+</body>
+</html>

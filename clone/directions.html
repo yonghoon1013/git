@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/directions.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="sub-con">
+
+        <div class="page-view">
+            <ul class="pg1">
+                <li class="home"><a href="index.html"><img src="img/ic-home-black-18-dp.svg" alt="d"></a></li>
+                <li class="qa"><p>이용안내</p>
+                <ul class="pg2">
+                    <li><a href="#">전시</a></li>
+                    <li><a href="#">교육·행사</a></li>
+                    <li><a href="#">소장품</a></li>
+                    <li><a href="#">학술·출판</a></li>
+                    <li><a href="#">소식·참여</a></li>
+                </ul></li>
+                <li class="qa"><p>오시는길</p>
+                    <ul class="pg2">    
+                        <li><a href="#">단체관람</a></li>
+                        <li><a href="#">시설안내</a></li>
+                        <li><a href="#">뮤지엄숍</a></li>
+                        <li><a href="#">대관안내</a></li>
+                        <li><a href="#">오시는길</a></li>
+                    </ul></li>
+            </ul>
+        </div>
+
+        <div class="con-box">
+            <h2 class="sub-title">오시는길</h2>
+
+            <div class="tab1">
+                <ul>
+                    <li class="on">
+                        <a href="#">
+                            대중교통 이용시
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            자가용 이용시
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sub-con-box1">
+                <h3>대중교통 이용시</h3>
+
+                <div class="traffic-info">
+                    <ul class="list01">
+                        <li>
+                            <div class="left">
+                                <p>지하철(분당선)</p>
+                            </div>
+
+                            <div class="right">
+                                <ul class="list02">
+                                    <li>분당선 상갈역 하차 4번출구 (도보 10분)</li>
+                                    <li>분당선 기흥역 하차 5번출구 (신갈고등학교 방면 탄천 따라 도보 15분) / 6번출구 38-1, 53번(마을버스)</li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="left">
+                                <p>지하철(분당선)</p>
+                            </div>
+
+                            <div class="right">
+                                <ul class="list02">
+                                    <li>ㄴㅁㅇㄴㅁㅇㅁ</li>
+                                    <li>ㄴㅁㅇㄴㅁㅇㅁ</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+
+
+
+                
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        $(function () {
+            $('body').prepend('<header class="header"></header>')
+            $('body').append('<footer class="footer"></footer>')
+            $(".header").load("header.html");
+            $(".footer").load("footer.html");
+        });
+    </script>
+</body>
+</html>
