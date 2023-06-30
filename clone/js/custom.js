@@ -1,4 +1,6 @@
-new Swiper('.swiper', {
+let ww = window.innerWidth;
+
+new Swiper('.first-swiper', {
   loop: true,
   slidesPerView: 3,
   navigation: {
@@ -7,12 +9,39 @@ new Swiper('.swiper', {
   }
 })
 
-const topBtn = document.querySelector(".scroll-top");
+function responsiveSwiper() {
+  if(ww<480){
+    new Swiper('.first-swiper', {
+      loop: true,
+      slidesPerView: 1,
+      centeredSlides: true,
+    })
+  }else{
+    
+  }
+}
+
+responsiveSwiper();
+
+
+
+
+
+// new Swiper('.second-swiper', {
+//   direction: 'vertical',
+//   autoplay: true,
+//   loop: true
+// });
+
+
+
+
+const topBtn = document.querySelector('.scroll-top');
 function scroll(){
-  window.scrollTo({ top: 0, behavior: "smooth" });  
+  window.scrollTo({ top: 0, behavior: 'smooth'});  
 }
 
 
-document.querySelector(".scroll-top").addEventListener("click",scroll);
+topBtn.addEventListener('click',scroll);
 
 

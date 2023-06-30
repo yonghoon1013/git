@@ -9,23 +9,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <title>Document</title>
 </head>
 
 <body>
+    
 
     <div class="main">
-
         <section class="video-box">
             <figure>
                 <video src="img/main-video.mp4" autoplay loop muted></video>
             </figure>
+            <div class="scroll-ani">
+                <div class="text">
+                    <span>S</span>
+                    <span>C</span>
+                    <span>R</span>
+                    <span>O</span>
+                    <span>L</span>
+                    <span>L</span>
+                </div>
+                <div class="inner">
+                    
+                </div>
+            </div>
         </section>
 
         <section class="today-time">
             <h2 class="title">
-
                 오늘의 관람시간
             </h2>
             <div class="content">
@@ -41,22 +53,58 @@
             </div>
         </section>
 
-        <section class="notice-box">
-            <div class="notice">
-                <div class="title">
-                    공지사항
+        <section class="notice-box second-swiper">
+            <div class="swiper-wrapper">
+                <div class="notice swiper-slide">
+                    <div class="title">
+                        공지사항
+                    </div>
+                    <div class="content">
+                        <a href="#">
+                            <p>2023. 05. 26.</p>
+                            <p>경기도박물관 누리집 점검 안내(5.31.18:00~)</p>
+                        </a>
+                    </div>
+                    <div class="tail">
+                        <a href="#">
+                            더 알아보기
+                        </a>
+                    </div>
                 </div>
-                <div class="content">
-                    <a href="#">
-                        <p>2023. 05. 26.</p>
-                        <p>경기도박물관 누리집 점검 안내(5.31.18:00~)</p>
-                    </a>
+
+                <!-- <div class="notice swiper-slide">
+                    <div class="title">
+                        공지사항
+                    </div>
+                    <div class="content">
+                        <a href="#">
+                            <p>2023. 05. 26.</p>
+                            <p>경기도박물관 누리집 점검 안내(5.31.18:00~)</p>
+                        </a>
+                    </div>
+                    <div class="tail">
+                        <a href="#">
+                            더 알아보기
+                        </a>
+                    </div>
                 </div>
-                <div class="tail">
-                    <a href="#">
-                        더 알아보기
-                    </a>
-                </div>
+
+                <div class="notice swiper-slide">
+                    <div class="title">
+                        공지사항
+                    </div>
+                    <div class="content">
+                        <a href="#">
+                            <p>2023. 05. 26.</p>
+                            <p>경기도박물관 누리집 점검 안내(5.31.18:00~)</p>
+                        </a>
+                    </div>
+                    <div class="tail">
+                        <a href="#">
+                            더 알아보기
+                        </a>
+                    </div>
+                </div> -->
             </div>
         </section>
 
@@ -64,20 +112,18 @@
             <div class="main-title">
                 박물관 새소식
                 <div class="pr-ne">
-                    <div class="swiper-btn swiper-button-prev">
-
-                    </div>
-                    <div class="swiper-btn swiper-button-next">
-
-                    </div>
+                    <div class="swiper-btn swiper-button-prev"></div>
+                    <div class="swiper-btn swiper-button-next"></div>
                 </div>
             </div>
             <div class="news-container">
-                <div class="swiper">
+                <div class="swiper first-swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
+
                             <a href="#">
                                 <div class="img-box">
+                                    <span class="badge">전시</span>
                                     <img src="img/main-slide01.jpg" alt="d">
                                     <div class="screen">
                                         <span>
@@ -93,12 +139,14 @@
                                         재개관 상설전 《경기 국가근본의 땅》
                                     </p>
                                 </div>
+
                             </a>
                         </div>
 
                         <div class="swiper-slide">
                             <a href="#">
                                 <div class="img-box">
+                                    <span class="badge">교육</span>
                                     <img src="img/main-slide02.jpg" alt="d">
                                     <div class="screen">
                                         <span>
@@ -120,6 +168,7 @@
                         <div class="swiper-slide">
                             <a href="#">
                                 <div class="img-box">
+                                    <span class="badge">교육</span>
                                     <img src="img/main-slide03.jpg" alt="d">
                                     <div class="screen">
                                         <span>
@@ -141,6 +190,7 @@
                         <div class="swiper-slide">
                             <a href="#">
                                 <div class="img-box">
+                                    <span class="badge">교육</span>
                                     <img src="img/main-slide04.jpg" alt="d">
                                     <div class="screen">
                                         <span>
@@ -172,8 +222,8 @@
             <h2 class="main-title">
                 소장유물
             </h2>
-            <ul class="collections-content">
-                <li style="left: 0%; top: 0%;">
+            <ul style="position: relative;" class="collections-content">
+                <li style="position: absolute; left: 0%; top: 0%;">
                     <a href="#">
                         <div class="collections-img">
                             <img src="img/relic01.jpg" alt="z">
@@ -194,7 +244,7 @@
                     </a>
                 </li>
 
-                <li style="left: 25%; top: 0%;">
+                <li style="position: absolute; left: 25%; top: 0%;">
                     <a href="#">
                         <div class="collections-img">
                             <img src="img/relic02.jpg" alt="z">
@@ -215,7 +265,7 @@
                     </a>
                 </li>
 
-                <li style="left: 50%; top: 0%;">
+                <li style="position: absolute; left: 50%; top: 0%;">
                     <a href="#">
                         <div class="collections-img">
                             <img src="img/relic03.jpg" alt="z">
@@ -236,7 +286,7 @@
                     </a>
                 </li>
 
-                <li style="left: 75%; top: 0%;">
+                <li style="position: absolute; left: 75%; top: 0%;">
                     <a href="#">
                         <div class="collections-img">
                             <img src="img/relic04.jpg" alt="z">
@@ -257,7 +307,7 @@
                     </a>
                 </li>
 
-                <li style="left: 75%; top: 16%;">
+                <li style="position: absolute; left: 75%; top: 16%;">
                     <a href="#">
                         <div class="collections-img">
                             <img src="img/relic05.jpg" alt="z">
@@ -278,7 +328,7 @@
                     </a>
                 </li>
 
-                <li style="left: 0%; top: 31%;">
+                <li style="position: absolute; left: 0%; top: 31%;">
                     <a href="#">
                         <div class="collections-img">
                             <img src="img/relic06.jpg" alt="z">
@@ -299,7 +349,7 @@
                     </a>
                 </li>
 
-                <li style="left: 25%; top: 30%;">
+                <li style="position: absolute; left: 25%; top: 30%;">
                     <a href="#">
                         <div class="collections-img">
                             <img src="img/relic07.jpg" alt="z">
@@ -320,7 +370,7 @@
                     </a>
                 </li>
 
-                <li style="left: 50%; top: 27%;">
+                <li style="position: absolute; left: 50%; top: 27%;">
                     <a href="#">
                         <div class="collections-img">
                             <img src="img/relic08.jpg" alt="z">
@@ -341,7 +391,7 @@
                     </a>
                 </li>
 
-                <li style="left: 75%; top: 31%;">
+                <li style="position: absolute; left: 75%; top: 31%;">
                     <a href="#">
                         <div class="collections-img">
                             <img src="img/relic09.jpg" alt="z">
@@ -362,7 +412,7 @@
                     </a>
                 </li>
 
-                <li style="left: 75%; top: 49%;">
+                <li style="position: absolute; left: 75%; top: 49%;">
                     <a href="#">
                         <div class="collections-img">
                             <img src="img/relic10.jpg" alt="z">
@@ -390,12 +440,13 @@
 
 
 
+
     <script>
         $(function () {
-            $('body').prepend('<div id="header"></div>')
-            $('body').append('<div id="footer"></div>')
-            $("#header").load("header.html");
-            $("#footer").load("footer.html");
+            $('body').prepend('<header class="header"></header>')
+            $('body').append('<footer class="footer"></footer>')
+            $(".header").load("header.html");
+            $(".footer").load("footer.html");
         });
     </script>
 

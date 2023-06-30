@@ -4,7 +4,10 @@
 
 
 
-.main {
+
+
+@media(min-width:1200px){
+    .main {
     @include main-width-auto();
     .video-box{
         position: relative;
@@ -93,6 +96,7 @@
     }
 
     .notice-box{
+        @include main-width-auto();
         padding: 0 10.4%;
         .notice{
             @include flex(space-between,center);
@@ -103,7 +107,7 @@
             margin-top: 100px;
             margin-bottom: 88px;
             div{
-                padding: 40px 35px;
+                padding: 25px 35px;
             }
             .title{
                 width: 155px;
@@ -351,3 +355,6 @@
         }
     }
 }
+}
+
+@import "_m-index";

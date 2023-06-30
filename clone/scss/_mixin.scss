@@ -24,6 +24,7 @@
     font-weight: bold;
     letter-spacing: 5px;
     position: relative;
+    @content;
 }
 
 @mixin screen(){
