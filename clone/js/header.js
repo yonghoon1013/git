@@ -1,6 +1,7 @@
 const headerOn = document.querySelector('.header'),
     ham = document.querySelector('.hammenu'),
     hamDrop = document.querySelector('.ham-drop-box'),
+    mo = document.querySelector('.mo'),
     fi = document.querySelector('.ham > span:nth-of-type(1)'),
     se = document.querySelector('.ham > span:nth-of-type(2)'),
     th = document.querySelector('.ham > span:nth-of-type(3)');
