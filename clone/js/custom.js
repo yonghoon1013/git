@@ -44,6 +44,18 @@ window.addEventListener('load',()=>{
   
 });
 
+/*
+function maso(){
+  $('.grid').masonry({
+    itemSelector: '.grid-item',
+    columnWidth: $('.grid-item:first').width(),
+    percentPosition: true,
+    gutter: '.gutter-sizer',
+    
+  });
+}
+window.addEventListener('resize',maso);
+*/
 topBtn.addEventListener('click',scroll);
 
 
