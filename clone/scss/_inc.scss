@@ -1,7 +1,6 @@
 .header{
     background-color: white;
-    // position: sticky;
-    position: relative;
+    position: sticky;
     top: 0;
     width: 100%;
     z-index: 99;
@@ -167,8 +166,8 @@
             background-color: #1f5153;
             padding: 38px 0;
             li{
-                max-width: 150px;
-                flex: 1 1 0;
+                width: 10%;
+
                 a{
                     font-size: 18px;
                     font-weight: bold;
@@ -178,6 +177,7 @@
                 }
                 ul{
                     li{
+                        width: 100%;
                         margin-bottom: 28px;
                         a{
                             font-size: 16px;
@@ -190,6 +190,7 @@
         }
 
     }
+
 }
 
 

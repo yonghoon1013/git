@@ -70,7 +70,7 @@ table {
 }
 .header {
   background-color: white;
-  position: relative;
+  position: sticky;
   top: 0;
   width: 100%;
   z-index: 99;
@@ -227,8 +227,7 @@ table {
   padding: 38px 0;
 }
 .header .ham-drop-box .ham-drop li {
-  max-width: 150px;
-  flex: 1 1 0;
+  width: 10%;
 }
 .header .ham-drop-box .ham-drop li a {
   font-size: 18px;
@@ -238,6 +237,7 @@ table {
   color: white;
 }
 .header .ham-drop-box .ham-drop li ul li {
+  width: 100%;
   margin-bottom: 28px;
 }
 .header .ham-drop-box .ham-drop li ul li a {
@@ -479,7 +479,7 @@ table {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 60px;
-  border: 1px solid 1px solid #e0e0e0;
+  border: 1px solid #e0e0e0;
 }
 .sub-con .con-box .sub-con-box1 .tab-list li {
   width: 25%;
@@ -488,7 +488,7 @@ table {
 .sub-con .con-box .sub-con-box1 .tab-list li a {
   position: relative;
   display: block;
-  color: #1f5153;
+  color: #999;
   font-weight: 800;
   padding: 20px;
 }
@@ -497,10 +497,14 @@ table {
   display: block;
   width: 1px;
   height: 20px;
-  background-color: 1px solid #e0e0e0;
+  background-color: #e0e0e0;
   position: absolute;
   right: 0;
   top: 18px;
+}
+.sub-con .con-box .sub-con-box1 .tab-list li:nth-of-type(1) a {
+  color: #1f5153;
+  border-bottom: 2px solid #1f5153;
 }
 .sub-con .con-box .sub-con-box1 .tab-list li:last-of-type a::after {
   content: "";
@@ -512,6 +516,7 @@ table {
   position: relative;
   padding-bottom: 150px;
   text-align: center;
+  border: solid 2px #f6f6f6;
 }
 .sub-con .con-box .sub-con-box1 .map-box h3 {
   font-size: 36px;
@@ -597,6 +602,8 @@ table {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-top: 2px solid black;
+  padding-top: 32px;
 }
 .sub-con .con-box .sub-con-box2 .img-box2 figure {
   cursor: pointer;

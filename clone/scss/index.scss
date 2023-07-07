@@ -65,14 +65,14 @@
 
             div,
             h2 {
-                padding: 1.5% 2%;
+                padding: 1.2% 2%;
                 text-align: center;
             }
 
             .title {
                 @include flex(center, center);
                 background-color: #1f5153;
-                width: 180px;
+                width: 200px;
                 color: white;
                 white-space: nowrap;
 
@@ -225,7 +225,7 @@
                     width: 50px;
                     height: 50px;
                     border: 1px solid black;
-                    border-radius: 50%;
+                    border-radius: 5%;
                     background-repeat: no-repeat;
                     background-size: 15px 15px;
                     background-position: center;
@@ -243,6 +243,8 @@
 
                 .swiper-button-prev {
                     background-image: url('../img/icon-angle_left.svg');
+                    background-repeat: no-repeat;
+                    background-size: 8px;
 
                     &:hover {
                         background-image: url('../img/icon-angle_left_white.svg');
@@ -251,7 +253,7 @@
 
                 .swiper-button-next {
                     background-image: url('../img/icon-angle_right.svg');
-
+                    background-size: 8px;
                     &:hover {
                         background-image: url('../img/icon-angle_right_white.svg');
                     }

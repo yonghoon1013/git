@@ -2,7 +2,6 @@
 @import "_mixin";
 
 
-
 @media (max-width:480px){
     .main {
         max-width: 480px;
@@ -137,7 +136,7 @@
                                 &:nth-of-type(2){
                                     white-space: nowrap;
                                     font-weight: bold;
-                                    font-size: 14px;
+                                    font-size: 12px;
                                     color: #333;
                                 }
                             }

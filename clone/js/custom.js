@@ -33,6 +33,7 @@ function scroll(){
 
 window.addEventListener('load',()=>{
 
+  
     $('.grid').masonry({
       itemSelector: '.grid-item',
       columnWidth: $('.grid-item:first').width(),
@@ -41,8 +42,8 @@ window.addEventListener('load',()=>{
       
     });
   
-
-  topBtn.addEventListener('click',scroll);
 });
+
+topBtn.addEventListener('click',scroll);
 
 

@@ -79,7 +79,7 @@
             .tab-list{
                 @include flex(space-between,center);
                 margin-bottom: 60px;
-                border: 1px solid 1px solid #e0e0e0;
+                border:1px solid #e0e0e0;
                 li{
                     width: 25%;
 
@@ -87,20 +87,23 @@
                     a{
                         position: relative;
                         display: block;
-                        color: #1f5153;
+                        color: #999;
                         font-weight: 800;
                         padding: 20px;
-
                         &::after{
                             content: '';
                             display: block;
                             width: 1px;
                             height: 20px;
-                            background-color: 1px solid #e0e0e0;
+                            background-color:#e0e0e0;
                             position: absolute;
                             right: 0;
                             top: 18px;
                         }
+                        }
+                        &:nth-of-type(1) a{
+                            color: #1f5153;
+                            border-bottom: 2px solid #1f5153;
                         }
                         &:last-of-type a{
                             &::after{
@@ -117,6 +120,7 @@
                 position: relative;
                 padding-bottom: 150px;
                 text-align: center;
+                border: solid 2px #f6f6f6;
                 h3{
                     font-size: 36px;
                     font-weight: bold;
@@ -188,6 +192,8 @@
             }
             .img-box2{
                 @include flex(space-between,center);
+                border-top: 2px solid black;
+                padding-top: 32px;
                     figure{
                         cursor: pointer;
                         overflow: hidden;

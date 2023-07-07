@@ -70,7 +70,7 @@ table {
 }
 .header {
   background-color: white;
-  position: relative;
+  position: sticky;
   top: 0;
   width: 100%;
   z-index: 99;
@@ -227,8 +227,7 @@ table {
   padding: 38px 0;
 }
 .header .ham-drop-box .ham-drop li {
-  max-width: 150px;
-  flex: 1 1 0;
+  width: 10%;
 }
 .header .ham-drop-box .ham-drop li a {
   font-size: 18px;
@@ -238,6 +237,7 @@ table {
   color: white;
 }
 .header .ham-drop-box .ham-drop li ul li {
+  width: 100%;
   margin-bottom: 28px;
 }
 .header .ham-drop-box .ham-drop li ul li a {
@@ -388,7 +388,7 @@ table {
   }
   .main .today-time div,
   .main .today-time h2 {
-    padding: 1.5% 2%;
+    padding: 1.2% 2%;
     text-align: center;
   }
   .main .today-time .title {
@@ -396,7 +396,7 @@ table {
     justify-content: center;
     align-items: center;
     background-color: #1f5153;
-    width: 180px;
+    width: 200px;
     color: white;
     white-space: nowrap;
   }
@@ -542,7 +542,7 @@ table {
     width: 50px;
     height: 50px;
     border: 1px solid black;
-    border-radius: 50%;
+    border-radius: 5%;
     background-repeat: no-repeat;
     background-size: 15px 15px;
     background-position: center;
@@ -558,12 +558,15 @@ table {
   }
   .main .news .pr-ne .swiper-button-prev {
     background-image: url("../img/icon-angle_left.svg");
+    background-repeat: no-repeat;
+    background-size: 8px;
   }
   .main .news .pr-ne .swiper-button-prev:hover {
     background-image: url("../img/icon-angle_left_white.svg");
   }
   .main .news .pr-ne .swiper-button-next {
     background-image: url("../img/icon-angle_right.svg");
+    background-size: 8px;
   }
   .main .news .pr-ne .swiper-button-next:hover {
     background-image: url("../img/icon-angle_right_white.svg");
@@ -983,7 +986,7 @@ table {
   .main .notice-box .mySwiper .swiper-wrapper .swiper-slide a p:nth-of-type(2) {
     white-space: nowrap;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 12px;
     color: #333;
   }
   .main .notice-box .tail {
@@ -1210,10 +1213,10 @@ table {
 @media (max-width: 480px) {
   .header {
     background-color: white;
-    position: relative;
+    position: fixed;
     top: 0;
+    z-index: 16;
     width: 100%;
-    z-index: 99;
   }
   .header .head {
     padding: 0px 3%;
@@ -1221,6 +1224,7 @@ table {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid #f0f0f0;
   }
   .header .head .logo {
     flex-grow: 0;
@@ -1350,11 +1354,14 @@ table {
   .header .ham-drop-box {
     display: none;
     width: 100%;
-    height: 500px;
-    overflow: hidden;
-    position: absolute;
-    top: 100%;
+    height: 100%;
     left: 0;
+    top: 50px;
+    bottom: 0;
+    overflow: auto;
+    position: fixed;
+    background-color: #fff;
+    padding: 10px 20px;
   }
   .header .ham-drop-box .logo {
     display: none;
@@ -1370,19 +1377,22 @@ table {
     display: flex;
     flex-wrap: wrap;
     background-color: white;
-    padding: 38px 0;
+    padding: 0;
   }
   .header .ham-drop-box .ham-drop > li {
     width: 100%;
-    padding: 18px 16px;
   }
   .header .ham-drop-box .ham-drop > li > a {
-    font-size: 18px;
+    text-align: left;
+    height: 54px;
+    font-size: 16px;
     font-weight: bold;
     display: block;
     margin-bottom: 0px;
     color: black;
     position: relative;
+    padding: 18px 10px;
+    border-bottom: 1px solid #f0f0f0;
   }
   .header .ham-drop-box .ham-drop > li > a::after {
     content: "";
@@ -1398,10 +1408,36 @@ table {
     right: 18px;
     transform: translateY(-50%);
   }
+  .header .ham-drop-box .ham-drop > li > .on {
+    color: #1f5153;
+  }
+  .header .ham-drop-box .ham-drop > li > .on::after {
+    content: "";
+    background-image: url("../img/icon-angle_down_green.svg");
+    width: 20px;
+    height: 20px;
+    background-size: 12px;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 18px;
+    transform: translateY(-50%) rotate(180deg);
+  }
   .header .ham-drop-box .ham-drop > li ul {
     display: none;
+    background-color: #f8f9fa;
+    width: 100%;
+    padding: 10px 30px;
+  }
+  .header .ham-drop-box .ham-drop > li ul li {
+    text-align: left;
+    margin-bottom: 0;
   }
   .header .ham-drop-box .ham-drop > li ul li a {
+    padding: 15px 0px;
+    margin-bottom: 0;
     font-size: 16px;
     font-weight: normal;
     color: black;
@@ -1413,19 +1449,20 @@ table {
   .footer .footer-con {
     margin: 0 auto;
     max-width: 2200px;
-    padding: 100px 5.2%;
+    padding: 30px 2.2%;
     background-color: #333;
     position: relative;
   }
   .footer .footer-con .footer-top {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
   }
   .footer .footer-con .footer-top .footer-logo-box {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    display: none;
   }
   .footer .footer-con .footer-top .footer-logo-box a {
     margin-right: 38px;
@@ -1433,9 +1470,15 @@ table {
   .footer .footer-con .footer-top .footer-logo-box a img {
     height: 32px;
   }
+  .footer .footer-con .footer-top .footer-select-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
   .footer .footer-con .footer-top .footer-select-box select {
     font-size: 14px;
-    width: 170px;
+    width: 150px;
     padding: 5px 15px;
     font-weight: 800;
     background: none;
@@ -1452,14 +1495,15 @@ table {
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   }
   .footer .footer-con .footer-middle address {
-    font-size: 14px;
+    text-align: center;
+    font-size: 12px;
     line-height: 2;
     color: #999;
     font-style: normal;
   }
   .footer .footer-con .footer-middle .sns {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     padding-top: 15px;
   }
@@ -1470,13 +1514,16 @@ table {
     display: block;
   }
   .footer .footer-con .footer-middle .sns li a img {
+    width: 20px;
+    height: 20px;
     display: block;
   }
   .footer .footer-con .footer-bottom {
     padding-top: 24px;
   }
   .footer .footer-con .footer-bottom p {
-    font-size: 14px;
+    text-align: center;
+    font-size: 12px;
     color: #999;
     font-weight: bold;
   }
@@ -1494,5 +1541,6 @@ table {
     border: 1px solid rgba(255, 255, 255, 0.1);
     cursor: pointer;
     z-index: 99;
+    display: none;
   }
 }/*# sourceMappingURL=index.css.map */
