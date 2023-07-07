@@ -347,7 +347,6 @@ table {
   }
   .main .video-box figure video {
     display: block;
-    width: 100%;
   }
   .main .video-box .scroll-ani {
     overflow: hidden;
@@ -844,9 +843,6 @@ table {
   src: url("/font/Noto_Sans_KR/NotoSansKR-Medium.otf");
 }
 @media (max-width: 480px) {
-  .main {
-    max-width: 480px;
-  }
   .main .video-box {
     position: relative;
   }
