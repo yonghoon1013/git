@@ -2,6 +2,7 @@ var swiper = new Swiper('.first-swiper', {
   loop: true,
   slidesPerView: 3,
   centeredSlides: true,
+  spaceBetween: 100,
   navigation: {
     prevEl: '.swiper-button-prev',
     nextEl: '.swiper-button-next'
@@ -22,10 +23,7 @@ var swiper = new Swiper(".mySwiper", {
 
 
 
-const topBtn = document.querySelector('.scroll-top');
-function scroll(){
-  window.scrollTo({ top: 0, behavior: 'smooth'});  
-}
+
 
 
 
@@ -56,6 +54,3 @@ function maso(){
 }
 window.addEventListener('resize',maso);
 */
-topBtn.addEventListener('click',scroll);
-
-
