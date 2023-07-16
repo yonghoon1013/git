@@ -131,10 +131,13 @@ table {
   display: block;
 }
 .header .head .search-menu {
-  flex: 1;
+  flex-grow: 0.5;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+.header .head .search-menu form {
+  display: flex;
 }
 .header .head .search-menu form input {
   width: 130px;
@@ -503,4 +506,4 @@ table {
   line-height: 1.5;
   margin: 0;
   padding: 0;
-}/*# sourceMappingURL=directions.css.map */
+}

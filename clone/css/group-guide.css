@@ -131,10 +131,13 @@ table {
   display: block;
 }
 .header .head .search-menu {
-  flex: 1;
+  flex-grow: 0.5;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+.header .head .search-menu form {
+  display: flex;
 }
 .header .head .search-menu form input {
   width: 130px;
@@ -459,4 +462,4 @@ table {
   background-color: #1f5153;
   color: white;
   cursor: pointer;
-}/*# sourceMappingURL=group-guide.css.map */
+}

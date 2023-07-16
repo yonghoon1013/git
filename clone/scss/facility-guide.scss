@@ -4,14 +4,15 @@
 
 @include sub-header();
 
-.sub-con{
-    .page-view{
+.sub-con {
+    .page-view {
         @include pg();
     }
 
-    .con-box{
+    .con-box {
         margin-bottom: 100px;
-        .sub-title{
+
+        >.sub-title {
             @include sub-title();
             background-image: url("../img/deco-guide.svg");
             background-repeat: no-repeat;
@@ -19,45 +20,49 @@
             background-position: 180% -300%;
 
         }
+
         @keyframes qwe {
-            0%{
+            0% {
                 background-position: 180% -300%;
             }
 
-            100%{
+            100% {
                 background-position: 90% -300%;
-            }   
+            }
         }
 
-        .sub-con-box1{
+        .sub-con-box1 {
             @include sub-width-auto();
             @include con-box-margin-b();
-            h3{
+
+            h3 {
                 @include h3();
             }
 
-            .info-list{
+            .info-list {
                 border-top: 2px solid black;
                 border-bottom: 1px solid #e0e0e0;
                 padding: 20px 30px;
                 margin-bottom: 50px;
                 display: flex;
-                li{
-                    @include flex(center,center);
-                    p{
-                        &:nth-of-type(1){
+
+                li {
+                    @include flex(center, center);
+
+                    p {
+                        &:nth-of-type(1) {
                             padding-right: 20px;
                             color: #333;
                             font-weight: 900;
                         }
 
-                        &:nth-of-type(2){
+                        &:nth-of-type(2) {
                             padding-right: 20px;
                             color: #666;
                         }
                     }
 
-                    &::after{
+                    &::after {
                         content: '';
                         width: 0;
                         height: 20px;
@@ -65,8 +70,8 @@
                         margin-right: 20px;
                     }
 
-                    &:last-of-type{
-                        &::after{
+                    &:last-of-type {
+                        &::after {
                             content: '';
                             width: 0;
                             height: 0;
@@ -76,178 +81,407 @@
                 }
             }
 
-            .tab-list{
-                @include flex(space-between,center);
+            .tab-list {
+                @include flex(space-between, center);
                 margin-bottom: 60px;
-                border:1px solid #e0e0e0;
-                li{
-                    width: 25%;
+                border: 1px solid #e0e0e0;
 
+                li {
+                    width: 25%;
                     text-align: center;
-                    a{
+
+                    a {
+                        cursor: pointer;
                         position: relative;
                         display: block;
                         color: #999;
                         font-weight: 800;
                         padding: 20px;
-                        &::after{
+
+                        &::after {
                             content: '';
                             display: block;
                             width: 1px;
                             height: 20px;
-                            background-color:#e0e0e0;
+                            background-color: #e0e0e0;
                             position: absolute;
                             right: 0;
                             top: 18px;
                         }
+                    }
+
+
+                    &:last-of-type a {
+                        &::after {
+                            content: '';
+                            width: 0;
+                            height: 0;
+                            border: none;
                         }
-                        &:nth-of-type(1) a{
-                            color: #1f5153;
-                            border-bottom: 2px solid #1f5153;
-                        }
-                        &:last-of-type a{
-                            &::after{
-                                content: '';
-                                width: 0;
-                                height: 0;
-                                border: none;
-                            }
+                    }
+                }
+                .on{
+                    a {
+                        color: #1f5153;
+                        border-bottom: 2px solid #1f5153;
                     }
                 }
             }
 
-            .map-box{
-                position: relative;
-                padding-bottom: 150px;
-                text-align: center;
-                border: solid 2px #f6f6f6;
-                h3{
-                    font-size: 36px;
-                    font-weight: bold;
-                    color: #1f5153;
-                    position: absolute;
-                    left: 40px;
-                    top: 36px;
+            .con-list{
+                .on{
+                    display: block;
                 }
-
-                .img-box{
-                    display: inline-block;
-                    position: relative;
-                    img{
-                        width: 100%;
-                    }
-                }
-
-                .facility-icon-list{
-                    width: 475px;
-                    position: absolute;
-                    right: 0;
-                    bottom: 20px;
-                    @include flex(center,center){
-                        flex-wrap: wrap
-                    };
-                    li{
-                        @include flex(center,center);
-                        margin: 0 20px 10px 0;
-                        text-align: left;
-                        .icon{
-                            background-image: url('../img/pic-facilities-descriptionicon-01.svg');
-                            background-repeat: no-repeat;
-                            width: 48px;
-                            height: 48px;
-                        }
-                        .right{
-                            p{
-                                width: 90px;
-                                font-size: 12px;
-                                color: #1f5153;
-                                font-weight: 600;
-                            }
-                            .txt-ko{
-                                font-size: 15px;
-                                margin-bottom: 5px;
-                            }
-                            .txt-en{
-                                font-size: 12px;
-                            }
-                        }
-
-                            $icons:(1:pic-icon01, 2:pic-icon02, 3:pic-icon02, 4:pic-icon04, 5:pic-icon05, 6:pic-icon06);
-
-                            @each $number, $name in $icons{
-                            &:nth-of-type(#{$number})  .icon{
-                            background:white url("../img/#{$name}.svg") no-repeat center;
-                        }
-                    }
-                    }
-                }
-            }
-        }
-
-        .sub-con-box2{
-            @include sub-width-auto();
-            @include con-box-margin-b();
-            h3{
-                @include h3();
-            }
-            .img-box2{
-                @include flex(space-between,center);
-                border-top: 2px solid black;
-                padding-top: 32px;
-                    figure{
-                        cursor: pointer;
-                        overflow: hidden;
-                        width: 400px;
-                        height: 400px;
+                >li{
+                    display: none;
+                    .map-box {
                         position: relative;
-                        .figure-box{
-                            width: 100%;
-                            height: 100%;
-                            transition: all 1s ease-in;
-                            img{
+                        padding-bottom: 150px;
+                        margin-bottom: 60px;
+                        text-align: center;
+                        border: solid 2px #f6f6f6;
+        
+                        h3 {
+                            font-size: 36px;
+                            font-weight: bold;
+                            color: #1f5153;
+                            position: absolute;
+                            left: 40px;
+                            top: 36px;
+                        }
+        
+                        .img-box {
+                            display: inline-block;
+        
+                            img {
                                 width: 100%;
-                                height: 100%;
-                                object-fit: cover;
+                            }
+        
+                            .link-box {
+                                :nth-of-type(1) {
+                                    display: block;
+                                    position: absolute;
+                                    top: 46%;
+                                    left: 11%;
+                                    width: 150px;
+                                    height: 50px;
+                                    background-color: #94a7a8;
+                                    opacity: 0;
+                                }
+        
+                                :nth-of-type(2) {
+                                    display: block;
+                                    position: absolute;
+                                    top: 13%;
+                                    left: 16%;
+                                    width: 100px;
+                                    height: 50px;
+                                    background-color: #1f51530f;
+                                    opacity: 0;
+                                }
+                            }
+        
+                            .tool-tip01 {
+                                position: absolute;
+                                top: 46.5%;
+                                left: 21%;
+        
+                                .tool-box {
+                                    width: 200px;
+                                    position: absolute;
+                                    top: -150px;
+                                    left: 0;
+                                    border: 1px solid #1f5153;
+                                    opacity: 0;
+        
+                                    .top {
+                                        background-color: #1f5153;
+                                        padding: 12px 14px;
+        
+                                        >.title {
+                                            color: white;
+                                            font-size: 17px;
+                                            font-weight: bold;
+                                        }
+        
+                                        >.sub-title {
+                                            color: white;
+                                            font-size: 12px;
+                                            line-height: 1.5;
+                                        }
+                                    }
+        
+                                    .bottom {
+                                        background-color: white;
+                                        padding: 12px 14px;
+        
+                                        >.content {
+                                            font-size: 12px;
+                                            font-weight: 600;
+                                            line-height: 1.4;
+                                            word-break: keep-all;
+                                            text-align: left;
+                                            letter-spacing: -0.3px;
+                                        }
+                                    }
+                                }
+        
+                                .on{
+                                    opacity: 1;
+                                }
+        
+                                .tool-point {
+                                    background-image: url(../img/btn-description-tooltip.svg);
+                                    background-repeat: no-repeat;
+                                    background-position: center;
+                                    width: 20px;
+                                    height: 20px;
+                                    opacity: 1;
+                                    cursor: pointer;
+                                }
+                            }
+        
+                            .tool-tip02 {
+                                position: absolute;
+                                top: 9%;
+                                left: 67.3%;
+        
+                                .tool-box {
+                                    width: 200px;
+                                    position: absolute;
+                                    top: -160px;
+                                    left: 0;
+                                    border: 1px solid #1f5153;
+                                    opacity: 0;
+        
+                                    .top {
+                                        background-color: #1f5153;
+                                        padding: 12px 14px;
+        
+                                        >.title {
+                                            color: white;
+                                            font-size: 17px;
+                                            font-weight: bold;
+                                        }
+        
+                                        >.sub-title {
+                                            color: white;
+                                            font-size: 12px;
+                                            line-height: 1.5;
+                                        }
+                                    }
+        
+                                    .bottom {
+                                        background-color: white;
+                                        padding: 12px 14px;
+        
+                                        >.content {
+                                            font-size: 12px;
+                                            font-weight: 600;
+                                            line-height: 1.4;
+                                            word-break: keep-all;
+                                            text-align: left;
+                                            letter-spacing: -0.3px;
+                                        }
+                                    }
+                                }
+        
+                                .on{
+                                    opacity: 1;
+                                }
+        
+                                .tool-point {
+                                    background-image: url(../img/btn-description-tooltip.svg);
+                                    background-repeat: no-repeat;
+                                    background-position: center;
+                                    width: 20px;
+                                    height: 20px;
+                                    opacity: 1;
+                                    cursor: pointer;
+                                }
+                            }
+        
+                        }
+                    }
+        
+                    .facility-icon-list {
+                        width: 475px;
+                        position: absolute;
+                        right: 0;
+                        bottom: 20px;
+        
+                        @include flex(center, center) {
+                            flex-wrap: wrap
+                        }
+        
+                        ;
+        
+                        li {
+                            @include flex(center, center);
+                            margin: 0 20px 10px 0;
+                            text-align: left;
+        
+                            .icon {
+                                background-image: url('../img/pic-facilities-descriptionicon-01.svg');
+                                background-repeat: no-repeat;
+                                width: 48px;
+                                height: 48px;
+                            }
+        
+                            .right {
+                                p {
+                                    width: 90px;
+                                    font-size: 12px;
+                                    color: #1f5153;
+                                    font-weight: 600;
+                                }
+        
+                                .txt-ko {
+                                    font-size: 15px;
+                                    margin-bottom: 5px;
+                                }
+        
+                                .txt-en {
+                                    font-size: 12px;
+                                }
+                            }
+        
+                            $icons: (
+                                1:pic-icon01,
+                                2:pic-icon02,
+                                3:pic-icon02,
+                                4:pic-icon04,
+                                5:pic-icon05,
+                                6:pic-icon06
+                            );
+        
+                        @each $number,
+                        $name in $icons {
+                            &:nth-of-type(#{$number}) .icon {
+                                background:white url("../img/#{$name}.svg") no-repeat center;
                             }
                         }
-                        figcaption{
-                            width: 100%;
-                            height: 100%;
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            background-color: rgba(0, 0, 0, 0.54);
-                            transition: all 0.4s;
-                            opacity: 0;
-                            .screen2{
-                                width: 100%;
-                                height: 100%;
-                                span{
-                                    position: absolute;
-                                    top: 50%;
-                                    left: 50%;
-                                    transform: translate(-50%,-50%);
-                                    display: block;
-                                    color: white;
-                                    font-size: 25px;
+                    }
+                }
+                .facilities{
+                    border: 1px solid red;
+                    margin-bottom: 60px;
+                    position: relative;
+                    h3{
+                        position: absolute;
+                        top: 10%;
+                        left: 2%;
+                        font-size: 36px;
+                        font-weight: bold;
+                        color: #1f5153
+                    }
+                    .Facilities-list{
+                        @include flex(space-between,center);
+                        padding: 100px;
+                        flex-wrap: wrap;
+                        gap :35px 3.1%;
+                        >li{
+                            text-align: center;
+                            width: 20%;
+                            .top{
+                                
+                                >img{
+                                    display: inline-block;
+                                }
+                            }
+
+                            .bootom{
+                                line-height: 1.3;
+                                >.title{
+
+                                }
+                                >.sub-title{
+
                                 }
                             }
                         }
-                        &:hover .figure-box{
-                            transform: scale(1.2);
-                        }
-    
-                        &:hover figcaption{
-                            opacity: 1;
-                        }
                     }
+                }
             }
         }
-
+        
+        .sub-con-box2 {
+            @include sub-width-auto();
+            @include con-box-margin-b();
+        
+            h3 {
+                @include h3();
+            }
+        
+            .img-box2 {
+                display: flex;
+                flex-wrap: wrap;
+                gap :35px 3.1%;
+                border-top: 2px solid black;
+                padding-top: 32px;
+        
+                figure {
+                    cursor: pointer;
+                    overflow: hidden;
+                    width: 400px;
+                    height: 400px;
+                    position: relative;
+        
+                    .figure-box {
+                        width: 100%;
+                        height: 100%;
+                        transition: all 1s ease-in;
+        
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+        
+                    figcaption {
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background-color: rgba(0, 0, 0, 0.54);
+                        transition: all 0.4s;
+                        opacity: 0;
+        
+                        .screen2 {
+                            width: 100%;
+                            height: 100%;
+        
+                            span {
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                display: block;
+                                color: white;
+                                font-size: 25px;
+                            }
+                        }
+                    }
+        
+                    &:hover .figure-box {
+                        transform: scale(1.2);
+                    }
+        
+                    &:hover figcaption {
+                        opacity: 1;
+                    }
+                }
+                }
+            }
     }
 }
 
-.modal{
+}
+
+
+.modal {
     position: fixed;
     top: 0;
     left: 0;
@@ -255,19 +489,21 @@
     height: 100%;
     z-index: 99;
     display: none;
-    .modal-overlay{
+
+    .modal-overlay {
         background-color: rgba(0, 0, 0, 0.7);
         width: 100%;
         height: 100%;
 
     }
 
-    .modal-content{
+    .modal-content {
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translate(-50%,-50%);
-        .modal-img{
+        transform: translate(-50%, -50%);
+
+        .modal-img {
             position: relative;
             top: 0;
             left: 0;
@@ -276,7 +512,7 @@
             object-fit: cover;
         }
 
-        .modal-close{
+        .modal-close {
             position: absolute;
             top: 0;
             right: 0;
@@ -291,7 +527,7 @@
             cursor: pointer;
         }
 
-        .modal-title{
+        .modal-title {
             position: absolute;
             bottom: 0;
             left: 0;

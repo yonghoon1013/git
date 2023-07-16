@@ -1,3 +1,5 @@
+window.onload = function(){
+
 const headerOn = document.querySelector('.header'),
     ham = document.querySelector('.hammenu'),
     hamDrop = document.querySelector('.ham-drop-box'),
@@ -71,7 +73,7 @@ let num = 0;
 
 ham.addEventListener('click',on);
 
-
+}
 
 
 

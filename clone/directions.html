@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,29 +10,34 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script defer src="./js/inc.js"></script>
     <title>Document</title>
 </head>
+
 <body>
-    
+
     <div class="sub-con">
 
         <div class="page-view">
             <ul class="pg1">
                 <li class="home"><a href="index.html"><img src="img/ic-home-black-18-dp.svg" alt="d"></a></li>
-                <li class="qa"><p>이용안내</p>
-                <ul class="pg2">
-                    <li><a href="#">전시</a></li>
-                    <li><a href="#">교육·행사</a></li>
-                    <li><a href="#">소장품</a></li>
-                    <li><a href="#">학술·출판</a></li>
-                    <li><a href="#">소식·참여</a></li>
-                </ul>
-            </li>
-                <li class="qa"><p>관람안내</p>
-                    <ul class="pg2">    
+                <li class="qa">
+                    <p>이용안내</p>
+                    <ul class="pg2">
+                        <li><a href="#">전시</a></li>
+                        <li><a href="#">교육·행사</a></li>
+                        <li><a href="#">소장품</a></li>
+                        <li><a href="#">학술·출판</a></li>
+                        <li><a href="#">소식·참여</a></li>
+                    </ul>
+                </li>
+                <li class="qa">
+                    <p>관람안내</p>
+                    <ul class="pg2">
                         <li><a href="group-guide.html">단체관람</a></li>
                         <li><a href="facility-guide.html">시설안내</a></li>
-                        <li><a href="https://smartstore.naver.com/gmuseumshop/category/068b76a900ef42289f7b7027d4972860" target="_blank">뮤지엄숍</a></li>
+                        <li><a href="https://smartstore.naver.com/gmuseumshop/category/068b76a900ef42289f7b7027d4972860"
+                                target="_blank">뮤지엄숍</a></li>
                         <li><a href="coronation-guide.html">대관안내</a></li>
                         <li><a href="directions.html">오시는길</a></li>
                     </ul>
@@ -91,25 +97,29 @@
                     </ul>
                 </div>
 
+                <div class="map">
+                    <div id="map" style="width:500px;height:400px;"></div>
+                    <script type="text/javascript"
+                        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d4aeba18c519cc30b5722388a89c4236"></script>
+                    <script>
+                        var container = document.getElementById('map');
+                        var options = {
+                            center: new kakao.maps.LatLng(33.450701, 126.570667),
+                            level: 3
+                        };
+
+                        var map = new kakao.maps.Map(container, options);
+                    </script>
+                </div>
 
 
 
-                
+
 
             </div>
         </div>
     </div>
 
-
-
-
-    <script>
-        $(function () {
-            $('body').prepend('<header class="header"></header>')
-            $('body').append('<footer class="footer"></footer>')
-            $(".header").load("header.html");
-            $(".footer").load("footer.html");
-        });
-    </script>
 </body>
+
 </html>

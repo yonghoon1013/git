@@ -60,9 +60,10 @@
         }
     
         .search-menu{
-            flex: 1;
+            flex-grow: 0.5;
             @include flex(flex-end,center);
             form{
+                display: flex;
                 input{
                     width: 130px;
                     border: none;

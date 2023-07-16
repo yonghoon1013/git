@@ -6,7 +6,7 @@
 
 
 
-@media(min-width:1200px) {
+@media(min-width:1024px) {
     .main {
         @include main-width-auto();
 
@@ -62,7 +62,9 @@
         .today-time {
             @include flex($y: center);
 
-            div,
+            div{
+                padding: 0 2%;
+            }
             h2 {
                 padding: 1.2% 2%;
                 text-align: center;
@@ -262,7 +264,7 @@
             .news-container {
                 position: relative;
                 .swiper {
-                    width: 80%;
+                    width: 90%;
                     height: 100%;
                     position: relative;
 
@@ -452,5 +454,7 @@
         }
     }
 
+@import "_t-index";
+@import "_t-inc";
 @import "_m-index";
 @import "_m-inc";

@@ -131,10 +131,13 @@ table {
   display: block;
 }
 .header .head .search-menu {
-  flex: 1;
+  flex-grow: 0.5;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+.header .head .search-menu form {
+  display: flex;
 }
 .header .head .search-menu form input {
   width: 130px;
@@ -535,4 +538,4 @@ table {
 }
 .sub-con .con-box .sub-con-box1 .btn-down .inner a:hover span::before {
   content: url("../img/ic-donwload-white-24-dp.png");
-}/*# sourceMappingURL=coronation-guide.css.map */
+}
