@@ -517,6 +517,7 @@ table {
   display: flex;
   background-color: white;
   padding: 10px;
+  z-index: 3;
 }
 .sub-con .con-box .sub-con-box1 .map-box .load-info .info-left {
   line-height: 1.8;
