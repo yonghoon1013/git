@@ -98,6 +98,9 @@
                 </div>
 
                 <div class="map-box">
+                    <div class="rlf">
+                        asd
+                    </div>
                     <div id="map" style="width:100%;height:600px;"></div>
                     <script type="text/javascript"
                         src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d4aeba18c519cc30b5722388a89c4236"></script>
@@ -133,7 +136,7 @@
                         marker.setMap(map);
 
                         // 마커에 커서가 오버됐을 때 마커 위에 표시할 인포윈도우를 생성합니다
-                        var iwContent = '<div style="padding:5px;">Hello World!</div>'; // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+                        var iwContent = '<div style="padding:5px;">경기도박물관</div>'; // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
 
                         // 인포윈도우를 생성합니다
                         var infowindow = new kakao.maps.InfoWindow({
@@ -151,6 +154,8 @@
                             // 마커에 마우스아웃 이벤트가 발생하면 인포윈도우를 제거합니다
                             infowindow.close();
                         });
+
+                        setZoomable(false); // 확대/축소 안되게하기
                     </script>
                 </div>
 
