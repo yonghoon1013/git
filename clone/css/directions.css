@@ -507,3 +507,63 @@ table {
   margin: 0;
   padding: 0;
 }
+.sub-con .con-box .sub-con-box1 .map-box {
+  position: relative;
+}
+.sub-con .con-box .sub-con-box1 .map-box .load-info {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  display: flex;
+  background-color: white;
+  padding: 10px;
+}
+.sub-con .con-box .sub-con-box1 .map-box .load-info .info-left {
+  line-height: 1.8;
+  width: 200px;
+}
+.sub-con .con-box .sub-con-box1 .map-box .load-info .info-left > .title {
+  font-size: 14px;
+}
+.sub-con .con-box .sub-con-box1 .map-box .load-info .info-left > .address {
+  font-size: 12px;
+}
+.sub-con .con-box .sub-con-box1 .map-box .load-info .info-left .review-box > .review-num {
+  font-size: 14px;
+}
+.sub-con .con-box .sub-con-box1 .map-box .load-info .info-left .review-box > .star {
+  font-size: 12px;
+}
+.sub-con .con-box .sub-con-box1 .map-box .load-info .info-left .review-box > a {
+  font-size: 12px;
+  color: #1a73e8;
+}
+.sub-con .con-box .sub-con-box1 .map-box .load-info .info-left .review-box > a:hover {
+  text-decoration: underline;
+}
+.sub-con .con-box .sub-con-box1 .map-box .load-info .info-left > .big-map {
+  font-size: 12px;
+  color: #1a73e8;
+}
+.sub-con .con-box .sub-con-box1 .map-box .load-info .info-left > .big-map:hover {
+  text-decoration: underline;
+}
+.sub-con .con-box .sub-con-box1 .map-box .load-info .info-right > a .nav-img {
+  background-image: url("../img/direction.png");
+  width: 24px;
+  height: 24px;
+  margin: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.sub-con .con-box .sub-con-box1 .map-box .load-info .info-right > a > p {
+  font-size: 12px;
+  color: #1a73e8;
+  padding: 2px 0;
+}
+.sub-con .con-box .sub-con-box1 .map-box .load-info .info-right > a:hover .nav-img {
+  background-image: url("../img/direction-on.png");
+}
+.sub-con .con-box .sub-con-box1 .map-box .load-info .info-right > a:hover > p {
+  text-decoration: underline;
+}

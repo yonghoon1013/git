@@ -110,8 +110,73 @@
                     }
                 }
                 .map-box{
+                    position: relative;
+                    .load-info{
+                        position: absolute;
+                        top: 15px;
+                        left: 15px;
+                        display: flex;
+                        background-color: white;
+                        padding: 10px;
+                        .info-left{
+                            line-height: 1.8;
+                            width: 200px;
+                            >.title{
+                                font-size: 14px;
+                            }
+                            >.address{
+                                font-size: 12px;
+                            }
+                            .review-box{
+                                >.review-num{
+                                    font-size: 14px;
+                                }
+                                >.star{
+                                    font-size: 12px;
+                                }
+                                >a{
+                                    font-size: 12px;
+                                    color: #1a73e8;
+                                    &:hover{
+                                        text-decoration: underline;
+                                    }
+                                }
+                            }
+                            >.big-map{
+                                font-size: 12px;
+                                color: #1a73e8;
+                                &:hover{
+                                    text-decoration: underline;
+                                }
+                            }
+                    }
                     
+                    .info-right{
+                        >a{
+                            .nav-img{
+                                background-image: url("../img/direction.png");
+                                width: 24px;
+                                height: 24px;
+                                margin: auto;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                            }
+                            >p{
+                                font-size: 12px;
+                                color: #1a73e8;
+                                padding: 2px 0;
+                            }
+                            &:hover .nav-img{
+                                background-image: url("../img/direction-on.png");
+                            }
+                            &:hover >p{
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
                 }
             }
         }
-}
+    }
+

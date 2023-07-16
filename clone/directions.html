@@ -98,8 +98,23 @@
                 </div>
 
                 <div class="map-box">
-                    <div class="rlf">
-                        asd
+                    <div class="load-info">
+                        <div class="info-left">
+                            <p class="title">경기도박물관</p>                            
+                            <p class="address">경기도 용인시 기흥구 상갈로 6</p>    
+                            <div class="review-box">
+                                <span class="review-num">4.2</span>
+                                <span class="star">별</span>
+                                <a href="#">리뷰 666개</a>
+                            </div>            
+                            <a class="big-map" href="#">큰 지도 보기</a>            
+                        </div>
+                        <div class="info-right">
+                            <a href="http://kko.to/qTCL8prqzY" target="_blank">
+                                <div class="nav-img"></div>
+                                <p>길찾기</p>
+                            </a>
+                        </div>
                     </div>
                     <div id="map" style="width:100%;height:600px;"></div>
                     <script type="text/javascript"
@@ -112,6 +127,8 @@
                         };
 
                         var map = new kakao.maps.Map(container, options);
+
+                        setZoomable(false); // 확대/축소 안되게하기
 
                         // 일반 지도와 스카이뷰로 지도 타입을 전환할 수 있는 지도타입 컨트롤을 생성합니다
                         var mapTypeControl = new kakao.maps.MapTypeControl();
@@ -155,7 +172,6 @@
                             infowindow.close();
                         });
 
-                        setZoomable(false); // 확대/축소 안되게하기
                     </script>
                 </div>
 
