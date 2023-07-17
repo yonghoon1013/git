@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,29 +10,34 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script defer src="./js/inc.js"></script>
     <title>Document</title>
 </head>
+
 <body>
-    
+
     <div class="sub-con">
 
         <div class="page-view">
             <ul class="pg1">
                 <li class="home"><a href="index.html"><img src="img/ic-home-black-18-dp.svg" alt="d"></a></li>
-                <li class="qa"><p>이용안내</p>
-                <ul class="pg2">
-                    <li><a href="#">전시</a></li>
-                    <li><a href="#">교육·행사</a></li>
-                    <li><a href="#">소장품</a></li>
-                    <li><a href="#">학술·출판</a></li>
-                    <li><a href="#">소식·참여</a></li>
-                </ul>
-            </li>
-                <li class="qa"><p>관람안내</p>
-                    <ul class="pg2">    
+                <li class="qa">
+                    <p>이용안내</p>
+                    <ul class="pg2">
+                        <li><a href="#">전시</a></li>
+                        <li><a href="#">교육·행사</a></li>
+                        <li><a href="#">소장품</a></li>
+                        <li><a href="#">학술·출판</a></li>
+                        <li><a href="#">소식·참여</a></li>
+                    </ul>
+                </li>
+                <li class="qa">
+                    <p>관람안내</p>
+                    <ul class="pg2">
                         <li><a href="group-guide.html">단체관람</a></li>
                         <li><a href="facility-guide.html">시설안내</a></li>
-                        <li><a href="https://smartstore.naver.com/gmuseumshop/category/068b76a900ef42289f7b7027d4972860" target="_blank">뮤지엄숍</a></li>
+                        <li><a href="https://smartstore.naver.com/gmuseumshop/category/068b76a900ef42289f7b7027d4972860"
+                                target="_blank">뮤지엄숍</a></li>
                         <li><a href="coronation-guide.html">대관안내</a></li>
                         <li><a href="directions.html">오시는길</a></li>
                     </ul>
@@ -83,33 +89,104 @@
 
                             <div class="right">
                                 <ul class="list02">
-                                    <li>아직 미완성..</li>
-                                    <li>아직 미완성..</li>
+                                    <li>아직asdasdassda1231..</li>
+                                    <li>아직asdsad.</li>
                                 </ul>
                             </div>
                         </li>
                     </ul>
                 </div>
 
+                <div class="map-box">
+                    <div class="load-info">
+                        <div class="info-left">
+                            <p class="title">경기도박물관</p>                            
+                            <p class="address">경기도 용인시 기흥구 상갈로 6</p>    
+                            <div class="review-box">
+                                <span class="review-num">4.2</span>
+                                <span class="star">별</span>
+                                <a href="#">리뷰 666개</a>
+                            </div>            
+                            <a class="big-map" href="https://place.map.kakao.com/21800626" target="_blank">큰 지도 보기</a>            
+                        </div>
+                        <div class="info-right">
+                            <a href="http://kko.to/qTCL8prqzY" target="_blank">
+                                <div class="nav-img"></div>
+                                <p>길찾기</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="map" style="width:100%;height:600px;"></div>
+                    <script type="text/javascript"
+                        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d4aeba18c519cc30b5722388a89c4236"></script>
+                    <script>
+                        var container = document.getElementById('map');
+                        var options = {
+                            center: new kakao.maps.LatLng(37.2681, 127.1088),
+                            level: 2
+                        };
+
+                        var map = new kakao.maps.Map(container, options);
+
+                        function setZoomable(zoomable) {
+                            map.setZoomable(false);
+                        }
+                            setZoomable();
+
+
+                        // 일반 지도와 스카이뷰로 지도 타입을 전환할 수 있는 지도타입 컨트롤을 생성합니다
+                        var mapTypeControl = new kakao.maps.MapTypeControl();
+
+                        // 지도에 컨트롤을 추가해야 지도위에 표시됩니다
+                        // kakao.maps.ControlPosition은 컨트롤이 표시될 위치를 정의하는데 TOPRIGHT는 오른쪽 위를 의미합니다
+                        map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+
+                        // 지도 확대 축소를 제어할 수 있는  줌 컨트롤을 생성합니다
+                        var zoomControl = new kakao.maps.ZoomControl();
+                        map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+
+                        // 마커가 표시될 위치입니다 
+                        var markerPosition = new kakao.maps.LatLng(37.2681, 127.1088);
+
+                        // 마커를 생성합니다
+                        var marker = new kakao.maps.Marker({
+                            position: markerPosition
+                        });
+
+                        // 마커가 지도 위에 표시되도록 설정합니다
+                        marker.setMap(map);
+
+                        // 마커에 커서가 오버됐을 때 마커 위에 표시할 인포윈도우를 생성합니다
+                        var iwContent = '<div style="padding:5px;">경기도박물관</div>'; // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+
+                        // 인포윈도우를 생성합니다
+                        var infowindow = new kakao.maps.InfoWindow({
+                            content: iwContent
+                        });
+
+                        // 마커에 마우스오버 이벤트를 등록합니다
+                        kakao.maps.event.addListener(marker, 'mouseover', function () {
+                            // 마커에 마우스오버 이벤트가 발생하면 인포윈도우를 마커위에 표시합니다
+                            infowindow.open(map, marker);
+                        });
+
+                        // 마커에 마우스아웃 이벤트를 등록합니다
+                        kakao.maps.event.addListener(marker, 'mouseout', function () {
+                            // 마커에 마우스아웃 이벤트가 발생하면 인포윈도우를 제거합니다
+                            infowindow.close();
+                        });
+
+                    </script>
+                </div>
 
 
 
-                
+
 
             </div>
         </div>
     </div>
 
-
-
-
-    <script>
-        $(function () {
-            $('body').prepend('<header class="header"></header>')
-            $('body').append('<footer class="footer"></footer>')
-            $(".header").load("header.html");
-            $(".footer").load("footer.html");
-        });
-    </script>
 </body>
+
 </html>

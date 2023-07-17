@@ -1,12 +1,19 @@
 var swiper = new Swiper('.first-swiper', {
   loop: true,
   slidesPerView: 3,
-  centeredSlides: true,
-  spaceBetween: 100,
+
+  spaceBetween: 30,
   navigation: {
     prevEl: '.swiper-button-prev',
     nextEl: '.swiper-button-next'
   },
+  breakpoints: {
+    1024:{
+      slidesPerView: 3,
+      spaceBetween: 100,
+    }
+  },
+
 })
 
 var swiper = new Swiper(".mySwiper", { 
@@ -18,14 +25,6 @@ var swiper = new Swiper(".mySwiper", {
         disableOnInteraction: false,
       },
     });
-
-
-
-
-
-
-
-
 
 
 
@@ -54,3 +53,5 @@ function maso(){
 }
 window.addEventListener('resize',maso);
 */
+
+
