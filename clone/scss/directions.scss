@@ -76,7 +76,9 @@
             .sub-con-box1{
                 @include con-box-margin-b();
                 h3{
-                    @include h3();
+                    @include h3(){
+                        font-size: 32px;
+                    };
                 }
 
                 .traffic-info{
@@ -85,24 +87,33 @@
                             flex-wrap: wrap;
                         }
 
-                        li{
+                        >li{
                             width: 100%;
-                            padding: 30px 0;
-                            @include flex(flex-start,center);
+                            @include flex(flex-start,flex-start);
                             .left{
                                 width: 30%;
                                 p{
-
+                                    font-size: 24px;
+                                    font-weight: 600;
+                                    padding: 30px;
                                 }
                             }
 
                             .right{
                                 width: 70%;
-                                .list02{
-                                    li{
-                                        line-height: 1.5;
-                                        margin: 0;
-                                        padding: 0;
+                                padding: 30px 0;
+                                .block{
+                                    margin-bottom: 30px;
+                                    >p{
+                                        line-height: 1.8;
+                                        margin-bottom: 10px;
+                                        font-weight: 600;
+                                    }
+                                    .list02{
+                                        >li{
+                                            @include list-style();
+                                            color: #666;
+                                        }
                                     }
                                 }
                             }
