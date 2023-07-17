@@ -120,6 +120,46 @@
                         }
                     }
                 }
+
+                .ad-info{
+                    @include flex();
+                    padding: 15px 25px;
+                    background-color: white;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+
+                    .location{
+                        display: flex;
+                        align-items: center;
+                        margin-right: 24px;
+                        &::before{
+                            display: inline-block;
+                            content: '';
+                            background-image: url('../img/ic-place-green-24-dp.svg');
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            width: 24px;
+                            height: 24px;
+                            background-size: 16px;
+                        }
+                    }
+                    .phone{
+                        display: flex;
+                        align-items: center;
+                        &::before{
+                            display: inline-block;
+                            content: '';
+                            background-image: url('../img/ic-telephone-green-56-dp.svg');
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            width: 24px;
+                            height: 24px;
+                            background-size: 18px;
+                        }
+                    }
+                }
+
                 .map-box{
                     position: relative;
                     .load-info{
@@ -130,6 +170,7 @@
                         background-color: white;
                         padding: 10px;
                         z-index: 3;
+                        display: none;
                         .info-left{
                             line-height: 1.8;
                             width: 200px;

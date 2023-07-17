@@ -525,6 +525,45 @@ table {
 .sub-con .con-box .sub-con-box1 .traffic-info .list01 > li .right .block .list02 > li::marker {
   color: #1f5153;
 }
+.sub-con .con-box .sub-con-box1 .ad-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 15px 25px;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.sub-con .con-box .sub-con-box1 .ad-info .location {
+  display: flex;
+  align-items: center;
+  margin-right: 24px;
+}
+.sub-con .con-box .sub-con-box1 .ad-info .location::before {
+  display: inline-block;
+  content: "";
+  background-image: url("../img/ic-place-green-24-dp.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 24px;
+  height: 24px;
+  background-size: 16px;
+}
+.sub-con .con-box .sub-con-box1 .ad-info .phone {
+  display: flex;
+  align-items: center;
+}
+.sub-con .con-box .sub-con-box1 .ad-info .phone::before {
+  display: inline-block;
+  content: "";
+  background-image: url("../img/ic-telephone-green-56-dp.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 24px;
+  height: 24px;
+  background-size: 18px;
+}
 .sub-con .con-box .sub-con-box1 .map-box {
   position: relative;
 }
@@ -536,6 +575,7 @@ table {
   background-color: white;
   padding: 10px;
   z-index: 3;
+  display: none;
 }
 .sub-con .con-box .sub-con-box1 .map-box .load-info .info-left {
   line-height: 1.8;
