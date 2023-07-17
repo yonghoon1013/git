@@ -1,5 +1,3 @@
-window.onload = function(){
-
 const headerOn = document.querySelector('.header'),
     ham = document.querySelector('.hammenu'),
     hamDrop = document.querySelector('.ham-drop-box'),
@@ -51,29 +49,5 @@ let num = 0;
 
 
 
-// let num = 0;
-
-// mo.forEach(function(e,k){
-//     e.onclick = function(){
-//         $(mo2[k]).slideToggle();
-//         if(this.classList.contains('on')){
-//             mo[num].classList.remove('on');
-//         }else{
-//             mo[num].classList.remove('on');
-//             this.classList.add('on');
-//             num = k;
-//         }
-
-//     }       
-//     console.log(mo2[1]);
-// })
-
-
-
-
 ham.addEventListener('click',on);
-
-}
-
-
 
