@@ -55,3 +55,16 @@ window.addEventListener('resize',maso);
 */
 
 
+
+const bgImg = document.querySelector('.deco-only-pc');
+
+
+function bgScroll(){
+  let y = pageYOffset/4;
+  bgImg.style = `left:${y}px`
+}
+
+
+window.addEventListener('scroll',bgScroll);
+
+

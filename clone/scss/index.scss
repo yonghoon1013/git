@@ -263,6 +263,7 @@
 
             .news-container {
                 position: relative;
+                overflow: hidden;
                 .swiper {
                     width: 90%;
                     height: 100%;
@@ -357,15 +358,15 @@
                     height: 174px;
                     z-index: -1;
                     bottom: 5%;
-                    right: 0;
+                    left: 100px;
                     animation: deco forwards 1s;
-                    transform: translateX(-20%);
+                    //transform: translateX(-20%);
                     // background-attachment: scroll;
                 }
 
                 @keyframes deco {
                     100% {
-                        transform: translateX(5%);
+                       // transform: translateX(5%);
                     }
                 }
             }

@@ -577,6 +577,7 @@ table {
   }
   .main .news .news-container {
     position: relative;
+    overflow: hidden;
   }
   .main .news .news-container .swiper {
     width: 90%;
@@ -672,15 +673,10 @@ table {
     height: 174px;
     z-index: -1;
     bottom: 5%;
-    right: 0;
+    left: 100px;
     animation: deco forwards 1s;
-    transform: translateX(-20%);
   }
-  @keyframes deco {
-    100% {
-      transform: translateX(5%);
-    }
-  }
+  @keyframes deco {}
   .main .collections {
     margin: 0 auto;
     max-width: 2200px;
