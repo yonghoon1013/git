@@ -8,7 +8,7 @@
         @include main-width-auto();
         @include flex(space-between,center);
         .logo{
-            flex-grow: 1;
+
             a{
                 img{
     
@@ -18,8 +18,11 @@
     
         nav{
             flex: 1 1 20%;
+
             .menu-bar{
                 @include flex(space-around,center);
+                width: 60%;
+                margin: 0 auto;
                 li{
                     position: relative;
                     a{
@@ -60,7 +63,6 @@
         }
     
         .search-menu{
-            flex-grow: 0.5;
             @include flex(flex-end,center);
             form{
                 display: flex;

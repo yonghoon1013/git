@@ -83,9 +83,6 @@ table {
   justify-content: space-between;
   align-items: center;
 }
-.header .head .logo {
-  flex-grow: 1;
-}
 .header .head nav {
   flex: 1 1 20%;
 }
@@ -93,6 +90,8 @@ table {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  width: 60%;
+  margin: 0 auto;
 }
 .header .head nav .menu-bar li {
   position: relative;
@@ -131,7 +130,6 @@ table {
   display: block;
 }
 .header .head .search-menu {
-  flex-grow: 0.5;
   display: flex;
   justify-content: flex-end;
   align-items: center;
