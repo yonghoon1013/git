@@ -1,0 +1,104 @@
+{
+    "items" : [
+        {
+            "img" : "img/relic01.jpg",
+            "name" : "유덕장 묵죽도",
+            "type" : "서화",
+            "era" : "조선",
+            "author" : "유덕장",
+            "size" : "가로 64 세로 104.2cm",
+            "year" : "18세기",
+            "colNum" : "5189"
+        },
+        {
+            "img" : "img/relic02.jpg",
+            "name" : "조영복 초상(유복본)",
+            "type" : "서화",
+            "era" : "조선",
+            "author" : "조영석(趙榮祏)",
+            "size" : "가로 76.5 세로 120㎝",
+            "year" : "1725년",
+            "colNum" : "2562"
+        },
+        {
+            "img" : "img/relic03.jpg",
+            "name" : "장만 초상(관복본)",
+            "type" : "서화",
+            "era" : "조선",
+            "author" : "",
+            "size" : "99.6×185.7cm",
+            "year" : "1625년",
+            "colNum" : "위503"
+        },
+        {
+            "img" : "img/relic04.jpg",
+            "name" : "홍경주 초상",
+            "type" : "서화",
+            "era" : "조선",
+            "author" : "",
+            "size" : "95×167cm",
+            "year" : "18-19세기",
+            "colNum" : "12288"
+        },
+        {
+            "img" : "img/relic05.jpg",
+            "name" : "김중만 초상",
+            "type" : "서화",
+            "era" : "조선",
+            "author" : "조영석(趙榮祏)",
+            "size" : "29.5×42.3cm",
+            "year" : "1751년 경",
+            "colNum" : "12297"
+        },
+        {
+            "img" : "img/relic06.jpg",
+            "name" : "송시열 초상",
+            "type" : "서화",
+            "era" : "조선",
+            "author" : "",
+            "size" : "50.5×57.8cm",
+            "year" : "19세기",
+            "colNum" : "12666"
+        },
+        {
+            "img" : "img/relic07.jpg",
+            "name" : "궁중진찬의궤병",
+            "type" : "서화",
+            "era" : "조선",
+            "author" : "",
+            "size" : "8폭, 각 폭 가로48 세로115㎝",
+            "year" : "18세기후반",
+            "colNum" : "5296"
+        },
+        {
+            "img" : "img/relic08.jpg",
+            "name" : "김중만 초상",
+            "type" : "서화",
+            "era" : "조선",
+            "author" : "조영석(趙榮祏)",
+            "size" : "29.5×42.3cm",
+            "year" : "1751년 경",
+            "colNum" : "12297"
+        },
+        {
+            "img" : "img/relic09.jpg",
+            "name" : "김득신 취선도",
+            "type" : "서화",
+            "era" : "조선",
+            "author" : "김득신",
+            "size" : "세로14 가로25㎝",
+            "year" : "18세기말~19세기초",
+            "colNum" : "4739"
+        },
+        {
+            "img" : "img/relic10.jpg",
+            "name" : "화조도",
+            "type" : "서화",
+            "era" : "조선",
+            "author" : "",
+            "size" : "가로49.4, 세로130.6㎝",
+            "year" : "조선후기",
+            "colNum" : "5191"
+        }
+    ]
+}
