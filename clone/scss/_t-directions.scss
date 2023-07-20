@@ -1,8 +1,8 @@
 @import "_reset";
 @import "_mixin";
-@import "_inc";
 
-@media(min-width:1024px) {
+
+@media (min-width:481px) and (max-width:1023px){
 
     @include sub-header();
 
@@ -35,6 +35,7 @@
 
             .tab1{
                 @include con-box-margin-b();
+                padding: 0 15px;
                 ul{
                     @include flex(space-between,center);
                     border: 1px solid #e0e0e0;
@@ -78,6 +79,7 @@
 
             .sub-con-box1{
                 @include con-box-margin-b();
+                padding: 0 15px;
                 h3{
                     @include h3(){
                         font-size: 32px;
@@ -93,19 +95,18 @@
 
                         >li{
                             width: 100%;
-                            @include flex(flex-start,flex-start);
                             .left{
-                                width: 30%;
+
                                 p{
-                                    font-size: 24px;
+                                    font-size: 20px;
                                     font-weight: 600;
-                                    padding: 30px;
+                                    padding: 10px;
                                     line-height: 1.6;
                                 }
                             }
 
                             .right{
-                                width: 70%;
+
                                 padding: 30px 0;
                                 border-bottom: 1px solid #e0e0e0;
                                 .block{
@@ -202,8 +203,7 @@
                 }
 
                 .ad-info{
-                    @include flex();
-                    padding: 15px 25px;
+                    padding: 15px 0;
                     background-color: white;
                     position: absolute;
                     left: 0;
@@ -307,8 +307,8 @@
                                     >tr{
                                         text-align: center;
                                         >th{
-                                            
-                                            padding: 20px 0;
+                                            vertical-align: middle;
+                                            padding: 10px 0;
                                             border: 1px solid #e0e0e0;
                                             &:nth-child(1){
                                                 border-left: none;
@@ -318,8 +318,9 @@
                                             color: #666;
                                             line-height: 1.6;
                                             vertical-align: middle;
-                                            padding: 20px 0;
+                                            padding: 10px 0;
                                             border: 1px solid #e0e0e0;
+                                            font-size: 14px;
                                             &:nth-last-of-type(1){
                                                 border-right: none;
                                             }
@@ -344,7 +345,7 @@
                                             border: 1px solid #e0e0e0;
                                             background-color: #f8f9fa;
                                             width: 30%;
-                                            padding: 20px 0;
+                                            padding: 10px 0;
                                             &:nth-of-type(1){
                                                 width: 15%;
                                                 border-left: none;
@@ -359,8 +360,7 @@
                                 >tbody{
                                     >tr{
                                         >th{
-                                            
-                                            padding: 20px 0;
+                                            padding: 10px 0;
                                             vertical-align: middle;
                                             border: 1px solid #e0e0e0;
                                             &:nth-of-type(1){
@@ -370,8 +370,9 @@
                                         >td{
                                             color: #666;
                                             line-height: 1.6;
-                                            padding: 20px 0;
+                                            padding: 10px 0;
                                             border: 1px solid #e0e0e0;
+                                            font-size: 14px;
                                             &:nth-of-type(1){
                                                 border-left: none;
                                             }
@@ -420,10 +421,3 @@
     }
 
 }
-
-
-
-    @import "_t-directions";
-    @import "_t-inc";
-    @import "_m-directions";
-    @import "_m-inc";

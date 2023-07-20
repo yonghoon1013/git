@@ -3,96 +3,82 @@
 @import "_inc";
 
 
-@media(min-width:1024px) {
-
+@media (min-width:481px) and (max-width:1023px){
     @include sub-header();
 
     .sub-con {
         .page-view {
             @include pg();
         }
-
+    
         .con-box {
             margin-bottom: 100px;
-
+    
             >.sub-title {
                 @include sub-title();
                 background-image: url("../img/deco-guide.svg");
                 background-repeat: no-repeat;
                 animation: qwe 2s forwards;
                 background-position: 180% -300%;
-
+    
             }
-
+    
             @keyframes qwe {
                 0% {
                     background-position: 180% -300%;
                 }
-
+    
                 100% {
                     background-position: 90% -300%;
                 }
             }
-
+    
             .sub-con-box1 {
                 @include sub-width-auto();
                 @include con-box-margin-b();
-
+                padding: 0 15px;
                 h3 {
                     @include h3();
                 }
-
+    
                 .info-list {
                     border-top: 2px solid black;
                     border-bottom: 1px solid #e0e0e0;
-                    padding: 20px 30px;
+                    padding: 10px 15px;
                     margin-bottom: 50px;
-                    display: flex;
 
+    
                     li {
                         @include flex(center, center);
-
+    
                         p {
+                            line-height: 1.5;
                             &:nth-of-type(1) {
+                                width: 30%;
                                 padding-right: 20px;
                                 color: #333;
                                 font-weight: 900;
                             }
-
+    
                             &:nth-of-type(2) {
+                                width: 70%;
                                 padding-right: 20px;
                                 color: #666;
                             }
                         }
-
-                        &::after {
-                            content: '';
-                            width: 0;
-                            height: 20px;
-                            border: 0.5px solid rgba(136, 136, 136, 0.438);
-                            margin-right: 20px;
-                        }
-
-                        &:last-of-type {
-                            &::after {
-                                content: '';
-                                width: 0;
-                                height: 0;
-                                border: none;
-                            }
-                        }
                     }
                 }
-
+    
                 .tab-list {
-                    @include flex(space-between, center);
+                    display: flex;
+                    flex-wrap: wrap;
                     margin-bottom: 60px;
                     border: 1px solid #e0e0e0;
-
+    
                     li {
-                        width: 25%;
+                        width: 50%;
                         text-align: center;
-
+    
                         a {
                             cursor: pointer;
                             position: relative;
@@ -100,7 +86,7 @@
                             color: #999;
                             font-weight: 800;
                             padding: 20px;
-
+    
                             &::after {
                                 content: '';
                                 display: block;
@@ -112,8 +98,8 @@
                                 top: 18px;
                             }
                         }
-
-
+    
+    
                         &:last-of-type a {
                             &::after {
                                 content: '';
@@ -123,91 +109,86 @@
                             }
                         }
                     }
-
-                    .on {
+                    .on{
                         a {
                             color: #1f5153;
                             border-bottom: 2px solid #1f5153;
                         }
                     }
                 }
-
-                .con-list {
-                    .on {
+    
+                .con-list{
+                    .on{
                         display: block;
                     }
-
-                    >li {
+                    >li{
                         display: none;
-
                         .map-box {
                             position: relative;
                             margin-bottom: 60px;
                             text-align: center;
                             border: solid 2px #f6f6f6;
-
+            
                             h3 {
                                 font-size: 36px;
                                 font-weight: bold;
                                 color: #1f5153;
-                                position: absolute;
-                                left: 40px;
-                                top: 36px;
                             }
-
+            
                             .img-box {
-                                display: inline-block;
+                                display: block;
                                 position: relative;
-                                padding-bottom: 150px;
-
+            
                                 img {
                                     width: 100%;
                                 }
-
+            
                                 .link-box {
+                                    display: none;
                                     .link01 {
                                         display: block;
                                         position: absolute;
                                         top: 49%;
                                         left: 3%;
-                                        transform: translate(-3%, -49%);
+                                        transform: translate(-3%,-49%);
                                         width: 150px;
                                         height: 50px;
                                         background-color: #94a7a8;
                                         opacity: 0;
                                     }
-
+            
                                     .link02 {
                                         display: block;
                                         position: absolute;
                                         top: 13%;
                                         left: 74%;
-                                        transform: translate(-74%, -13%);
+                                        transform: translate(-74%,-13%);
                                         width: 100px;
                                         height: 50px;
                                         background-color: #1f51530f;
                                         opacity: 0;
                                     }
-
+    
                                     .link03 {
                                         display: block;
                                         position: absolute;
                                         top: 33%;
                                         left: 16%;
-                                        transform: translate(-16%, -33%);
+                                        transform: translate(-16%,-33%);
                                         width: 120px;
                                         height: 50px;
                                         background-color: #1f51530f;
                                         opacity: 0;
                                     }
                                 }
-
+            
                                 .tool-tip01 {
                                     position: absolute;
                                     top: 48%;
                                     left: 15%;
-                                    transform: translate(-15%, -48%);
-
+                                    transform: translate(-15%,-48%);
+                                    display: none;
+            
                                     .tool-box {
                                         width: 200px;
                                         position: absolute;
@@ -215,28 +196,28 @@
                                         left: 0;
                                         border: 1px solid #1f5153;
                                         opacity: 0;
-
+            
                                         .top {
                                             background-color: #1f5153;
                                             padding: 12px 14px;
-
+            
                                             >.title {
                                                 color: white;
                                                 font-size: 17px;
                                                 font-weight: bold;
                                             }
-
+            
                                             >.sub-title {
                                                 color: white;
                                                 font-size: 12px;
                                                 line-height: 1.5;
                                             }
                                         }
-
+            
                                         .bottom {
                                             background-color: white;
                                             padding: 12px 14px;
-
+            
                                             >.content {
                                                 font-size: 12px;
                                                 font-weight: 600;
@@ -247,11 +228,11 @@
                                             }
                                         }
                                     }
-
-                                    .on {
+            
+                                    .on{
                                         opacity: 1;
                                     }
-
+            
                                     .tool-point {
                                         background-image: url(../img/btn-description-tooltip.svg);
                                         background-repeat: no-repeat;
@@ -260,15 +241,17 @@
                                         height: 20px;
                                         opacity: 1;
                                         cursor: pointer;
+                                        display: none;
                                     }
                                 }
-
+            
                                 .tool-tip02 {
                                     position: absolute;
                                     top: 9%;
                                     left: 72%;
-                                    transform: translate(-72%, -9%);
-
+                                    transform: translate(-72%,-9%);
+                                    display: none;
+            
                                     .tool-box {
                                         width: 200px;
                                         position: absolute;
@@ -276,28 +259,28 @@
                                         left: 0;
                                         border: 1px solid #1f5153;
                                         opacity: 0;
-
+            
                                         .top {
                                             background-color: #1f5153;
                                             padding: 12px 14px;
-
+            
                                             >.title {
                                                 color: white;
                                                 font-size: 17px;
                                                 font-weight: bold;
                                             }
-
+            
                                             >.sub-title {
                                                 color: white;
                                                 font-size: 12px;
                                                 line-height: 1.5;
                                             }
                                         }
-
+            
                                         .bottom {
                                             background-color: white;
                                             padding: 12px 14px;
-
+            
                                             >.content {
                                                 font-size: 12px;
                                                 font-weight: 600;
@@ -308,11 +291,11 @@
                                             }
                                         }
                                     }
-
-                                    .on {
+            
+                                    .on{
                                         opacity: 1;
                                     }
-
+            
                                     .tool-point {
                                         background-image: url(../img/btn-description-tooltip.svg);
                                         background-repeat: no-repeat;
@@ -323,13 +306,14 @@
                                         cursor: pointer;
                                     }
                                 }
-
+    
                                 .tool-tip03 {
                                     position: absolute;
                                     top: 31.5%;
                                     left: 25%;
-                                    transform: translate(-25%, 31.5%);
-
+                                    transform: translate(-25%,31.5%);
+                                    display: none;
+            
                                     .tool-box {
                                         width: 200px;
                                         position: absolute;
@@ -337,29 +321,29 @@
                                         left: 0;
                                         border: 1px solid #1f5153;
                                         opacity: 0;
-
+            
                                         .top {
                                             text-align: left;
                                             background-color: #1f5153;
                                             padding: 12px 14px;
-
+            
                                             >.title {
                                                 color: white;
                                                 font-size: 17px;
                                                 font-weight: bold;
                                             }
-
+            
                                             >.sub-title {
                                                 color: white;
                                                 font-size: 12px;
                                                 line-height: 1.5;
                                             }
                                         }
-
+            
                                         .bottom {
                                             background-color: white;
                                             padding: 12px 14px;
-
+            
                                             >.content {
                                                 font-size: 12px;
                                                 font-weight: 600;
@@ -370,11 +354,11 @@
                                             }
                                         }
                                     }
-
-                                    .on {
+            
+                                    .on{
                                         opacity: 1;
                                     }
-
+            
                                     .tool-point {
                                         background-image: url(../img/btn-description-tooltip.svg);
                                         background-repeat: no-repeat;
@@ -385,13 +369,13 @@
                                         cursor: pointer;
                                     }
                                 }
-
+    
                                 .tool-tip04 {
                                     position: absolute;
                                     top: 41%;
                                     left: 27.5%;
                                     transform: translate(-27.5%, -41%);
-
+                                    display: none;
                                     .tool-box {
                                         width: 200px;
                                         position: absolute;
@@ -399,29 +383,29 @@
                                         left: 0;
                                         border: 1px solid #1f5153;
                                         opacity: 0;
-
+            
                                         .top {
                                             text-align: left;
                                             background-color: #1f5153;
                                             padding: 12px 14px;
-
+            
                                             >.title {
                                                 color: white;
                                                 font-size: 17px;
                                                 font-weight: bold;
                                             }
-
+            
                                             >.sub-title {
                                                 color: white;
                                                 font-size: 12px;
                                                 line-height: 1.5;
                                             }
                                         }
-
+            
                                         .bottom {
                                             background-color: white;
                                             padding: 12px 14px;
-
+            
                                             >.content {
                                                 font-size: 12px;
                                                 font-weight: 600;
@@ -432,11 +416,11 @@
                                             }
                                         }
                                     }
-
-                                    .on {
+            
+                                    .on{
                                         opacity: 1;
                                     }
-
+            
                                     .tool-point {
                                         background-image: url(../img/btn-description-tooltip.svg);
                                         background-repeat: no-repeat;
@@ -447,34 +431,32 @@
                                         cursor: pointer;
                                     }
                                 }
-
+            
                             }
                         }
-
+            
                         .facility-icon-list {
                             width: 475px;
                             position: absolute;
                             right: 0;
                             bottom: 20px;
-
                             @include flex(center, center) {
                                 flex-wrap: wrap
-                            }
-
-                            ;
-
+                            };
+                            display: none;
+            
                             li {
                                 @include flex(center, center);
                                 margin: 0 20px 10px 0;
                                 text-align: left;
-
+            
                                 .icon {
                                     background-image: url('../img/pic-facilities-descriptionicon-01.svg');
                                     background-repeat: no-repeat;
                                     width: 48px;
                                     height: 48px;
                                 }
-
+            
                                 .right {
                                     p {
                                         width: 90px;
@@ -482,17 +464,17 @@
                                         color: #1f5153;
                                         font-weight: 600;
                                     }
-
+            
                                     .txt-ko {
                                         font-size: 15px;
                                         margin-bottom: 5px;
                                     }
-
+            
                                     .txt-en {
                                         font-size: 12px;
                                     }
                                 }
-
+            
                                 $icons: (
                                     1:pic-icon01,
                                     2:pic-icon02,
@@ -501,7 +483,7 @@
                                     5:pic-icon05,
                                     6:pic-icon06
                                 );
-
+            
                             @each $number,
                             $name in $icons {
                                 &:nth-of-type(#{$number}) .icon {
@@ -510,85 +492,79 @@
                             }
                         }
                     }
-
-                    .facilities {
+                    .facilities{
                         border: 2px solid #f6f6f6;
                         margin-bottom: 60px;
                         position: relative;
-
-                        h3 {
-                            position: absolute;
-                            top: 10%;
-                            left: 2%;
+                        h3{
+                            text-align: center;
                             font-size: 36px;
                             font-weight: bold;
                             color: #1f5153
                         }
-
-                        .Facilities-list {
-                            @include flex(space-between, center);
-                            padding: 100px;
+                        .Facilities-list{
+                            @include flex(space-between,center);
+                            padding: 50px;
                             flex-wrap: wrap;
-                            gap: 35px 3.1%;
-
-                            >li {
+                            >li{
                                 text-align: center;
-                                width: 20%;
-
-                                .top {
-
-                                    >img {
+                                width: 50%;
+                                padding: 10px;
+                                .top{
+                                    
+                                    >img{
                                         display: inline-block;
                                     }
                                 }
-
-                                .bootom {
+    
+                                .bootom{
                                     line-height: 1.3;
-
-                                    >.title {}
-
-                                    >.sub-title {}
+                                    >.title{
+                                        font-size: 14px
+                                    }
+                                    >.sub-title{
+                                        font-size: 12px
+                                    }
                                 }
                             }
                         }
                     }
                 }
             }
-
+            
             .sub-con-box2 {
                 @include sub-width-auto();
                 @include con-box-margin-b();
-
+                padding: 0 15px;
+            
                 h3 {
                     @include h3();
                 }
-
+            
                 .img-box2 {
-                    display: flex;
-                    flex-wrap: wrap;
-                    gap: 35px 3.1%;
                     border-top: 2px solid black;
                     padding-top: 32px;
-
+                    width: 100%;
                     figure {
                         cursor: pointer;
                         overflow: hidden;
-                        width: 400px;
-                        height: 400px;
+                        width: 100%;
+                        height: 600px;
                         position: relative;
-
+                        margin-bottom: 20px;
+            
                         .figure-box {
                             width: 100%;
                             height: 100%;
                             transition: all 1s ease-in;
-
+            
                             img {
                                 width: 100%;
                                 height: 100%;
                                 object-fit: cover;
                             }
                         }
-
+            
                         figcaption {
                             width: 100%;
                             height: 100%;
@@ -598,11 +574,11 @@
                             background-color: rgba(0, 0, 0, 0.54);
                             transition: all 0.4s;
                             opacity: 0;
-
+            
                             .screen2 {
                                 width: 100%;
                                 height: 100%;
-
+            
                                 span {
                                     position: absolute;
                                     top: 50%;
@@ -614,85 +590,80 @@
                                 }
                             }
                         }
-
+            
                         &:hover .figure-box {
                             transform: scale(1.2);
                         }
-
+            
                         &:hover figcaption {
                             opacity: 1;
                         }
                     }
+                    }
                 }
+        }
+    }
+    
+    }
+    
+    
+    .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 99;
+        display: none;
+    
+        .modal-overlay {
+            background-color: rgba(0, 0, 0, 0.7);
+            width: 100%;
+            height: 100%;
+    
+        }
+    
+        .modal-content {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+    
+            .modal-img {
+                position: relative;
+                top: 0;
+                left: 0;
+                width: 950px;
+                height: 700px;
+                object-fit: cover;
+            }
+    
+            .modal-close {
+                position: absolute;
+                top: 0;
+                right: 0;
+                background-image: url('../img/ic-close-white-36-dp.svg');
+                width: 64px;
+                height: 64px;
+                background-size: 50%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-color: rgba(0, 0, 0, 0.7);
+                border: none;
+                cursor: pointer;
+            }
+    
+            .modal-title {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                padding: 0 0 50px 50px;
+                font-size: 24px;
+                font-weight: bold;
+                color: white;
             }
         }
     }
+    
 
 }
-
-
-.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 99;
-    display: none;
-
-    .modal-overlay {
-        background-color: rgba(0, 0, 0, 0.7);
-        width: 100%;
-        height: 100%;
-
-    }
-
-    .modal-content {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-
-        .modal-img {
-            position: relative;
-            top: 0;
-            left: 0;
-            width: 950px;
-            height: 700px;
-            object-fit: cover;
-        }
-
-        .modal-close {
-            position: absolute;
-            top: 0;
-            right: 0;
-            background-image: url('../img/ic-close-white-36-dp.svg');
-            width: 64px;
-            height: 64px;
-            background-size: 50%;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-color: rgba(0, 0, 0, 0.7);
-            border: none;
-            cursor: pointer;
-        }
-
-        .modal-title {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            padding: 0 0 50px 50px;
-            font-size: 24px;
-            font-weight: bold;
-            color: white;
-        }
-    }
-}
-
-}
-
-
-@import "_t-facility-guide";
-@import "_t-inc";
-@import "_m-facility-guide";
-@import "_m-inc";

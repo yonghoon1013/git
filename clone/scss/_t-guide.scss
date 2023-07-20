@@ -1,0 +1,144 @@
+@import "_reset";
+@import "_mixin";
+
+@media (min-width:481px) and (max-width:1023px){
+
+    @include sub-header();
+    .sub-con{
+        .page-view{
+            @include pg();
+            }
+        
+            .con-box{
+                @include sub-width-auto();
+                margin-bottom: 100px;
+                .sub-title{
+                    @include sub-title();
+                    background-image: url("../img/deco-guide.svg");
+                    background-repeat: no-repeat;
+                    animation: qwe 2s forwards;
+                    background-position: 180% -300%;
+    
+                }
+                @keyframes qwe {
+                    0%{
+                        background-position: 180% -300%;
+                    }
+    
+                    100%{
+                        background-position: 90% -300%;
+                    }   
+                }
+            
+                .sub-con-box1{
+                    @include con-box-margin-b();
+                    padding: 0 15px;
+                    h3{
+                        @include h3();
+                    }
+                    table{
+                        width: 100%;
+                        border-top: 2px solid black;
+                        
+                        tr{
+                            border-bottom: 1px solid #e0e0e0;
+                            th{
+                                border-right: 1px solid #e0e0e0;
+                                border-left: none;
+                                vertical-align: middle;
+                                padding: 20px 0;
+                                width: 20%;
+                                font-size: 16px;
+                                font-weight: 400;
+                                color: #333;
+
+                            }
+                            td{
+                                text-align: center;
+                                vertical-align: middle;
+                                padding: 20px 0;
+                                width: 80%;
+                                line-height: 1.5;
+                                color: #666;
+                                font-size: 14px;
+                            }
+                            .point{
+                                font-size: 16px;
+                                color: red;
+                                font-weight: normal;
+                            }
+                            .strong{
+                                font-size: 18px;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+    
+                .sub-con-box2{
+                    @include con-box-margin-b();
+                    padding: 0 15px;
+                    h3{
+                        @include h3();
+                    }
+                    table{
+                        width: 100%;
+                        border-top: 2px solid black;
+                        thead{
+                            th{
+                                background-color: #f8f9fa;
+                            }
+                        }
+                        tr{
+                            th{
+                                color: #333;
+                                border: 1px solid #e0e0e0;
+                                padding: 20px 0;
+                                width: 20%;
+                                vertical-align: middle;
+                                &:first-of-type{
+                                    border-left: none; 
+                                }
+                                &:last-of-type{
+                                    border-right: none;
+                                }
+                            }
+                            td{
+                                color: #666;
+                                border: 1px solid #e0e0e0;
+                                text-align: center;
+                                padding: 20px 0;
+                                width: 26%;
+                                vertical-align: middle;
+                                font-size: 14px;
+                                &:last-of-type{
+                                    border-right: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            
+                .sub-con-box3{
+                    @include con-box-margin-b();
+                    padding: 0 15px;
+                    h3{
+                        @include h3();
+                    }
+                    ul{
+                        li{
+                            @include list-style();
+                            font-size: 14px
+                        }
+                    }
+                }
+            }
+    }
+    
+
+
+}
+
+
+@import "_t-inc";
+@import "_m-inc";

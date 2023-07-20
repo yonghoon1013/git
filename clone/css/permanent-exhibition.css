@@ -906,7 +906,7 @@ table {
   }
 }
 @media (max-width: 480px) {
-  .on {
+  .header.on {
     position: fixed;
     top: 0;
     width: 100%;

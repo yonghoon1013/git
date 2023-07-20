@@ -2,7 +2,11 @@
 @import "_mixin";
 @import "_inc";
 
-@include sub-header();
+
+
+@media(min-width:1024px) {
+
+    @include sub-header();
 
 
 .sub-con{
@@ -128,6 +132,12 @@
             }
         }
 }
+    
+}
+
+
 
 @import "_t-inc";
+@import "_t-guide";
 @import "_m-inc";
+@import "_m-guide";
