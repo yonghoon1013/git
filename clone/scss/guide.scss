@@ -4,6 +4,7 @@
 
 @include sub-header();
 
+
 .sub-con{
     .page-view{
         @include pg();
@@ -126,7 +127,7 @@
                 }
             }
         }
-
-    
-
 }
+
+@import "_t-inc";
+@import "_m-inc";

@@ -72,16 +72,6 @@
         },
         {
             "img" : "img/relic08.jpg",
-            "name" : "김중만 초상",
-            "type" : "서화",
-            "era" : "조선",
-            "author" : "조영석(趙榮祏)",
-            "size" : "29.5×42.3cm",
-            "year" : "1751년 경",
-            "colNum" : "12297"
-        },
-        {
-            "img" : "img/relic09.jpg",
             "name" : "김득신 취선도",
             "type" : "서화",
             "era" : "조선",
@@ -89,6 +79,16 @@
             "size" : "세로14 가로25㎝",
             "year" : "18세기말~19세기초",
             "colNum" : "4739"
+        },
+        {
+            "img" : "img/relic09.jpg",
+            "name" : "정선 양화답설도",
+            "type" : "서화",
+            "era" : "조선",
+            "author" : "정선",
+            "size" : "가로32.2 세로22㎝",
+            "year" : "18세기 전반",
+            "colNum" : "5352"
         },
         {
             "img" : "img/relic10.jpg",

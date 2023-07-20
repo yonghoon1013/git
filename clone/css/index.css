@@ -1958,11 +1958,14 @@ table {
   }
 }
 @media (max-width: 480px) {
-  .header {
-    background-color: white;
+  .on {
     position: fixed;
     top: 0;
-    z-index: 16;
+    width: 100%;
+  }
+  .header {
+    background-color: white;
+    z-index: 99;
     width: 100%;
   }
   .header .head {
