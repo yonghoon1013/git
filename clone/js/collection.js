@@ -47,11 +47,25 @@ function colClick(){
         //  메인 소장유물 클릭시 유물 이미지 정보 불러오기
         const collImgBox = document.querySelector('.img-box');
 
-        collImgBox.innerHTML = `
+        collImgBox.innerHTML += `
+        <div class="bg-img">
+        <img src="./${data.items[colStorageNum].img}" alt="">
+        </div>
+`;
+
+        collImgBox.innerHTML += `
                 <div class="img-print">
                 <img src="./${data.items[colStorageNum].img}" alt="">
                 </div>
         `;
+        // collImgBox.style =`
+        //     background-image: url('./${data.items[colStorageNum].img}');
+        //     background-repeat: no-repeat;
+        //     width: 100%;
+        //     height: 100%;
+        //     background-size: 100%;
+        //     object-fit: cover;
+        // `
 
         const elSpan = document.querySelectorAll('.right > ul > li > span'),
                 elLi = document.querySelectorAll('.right > ul > li');
@@ -73,7 +87,7 @@ colClick();
 
 var swiper = new Swiper(".dif-coll", {
     loop: true,
-    slidesPerView: 3,
+    slidesPerView: 5,
     spaceBetween: 50,
     navigation: {
         nextEl: ".swiper-button-next",
