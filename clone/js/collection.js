@@ -87,10 +87,17 @@ colClick();
 
 var swiper = new Swiper(".dif-coll", {
     loop: true,
-    slidesPerView: 5,
-    spaceBetween: 50,
+    slidesPerView: 1,
+    spaceBetween: 20,
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
+    },
+
+    breakpoints: {
+        1024:{
+            slidesPerView: 5,
+            spaceBetween: 50,
+        }
     },
 });

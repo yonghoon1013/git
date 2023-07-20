@@ -1,9 +1,8 @@
 @import "_reset";
 @import "_mixin";
-@import "_inc";
 
 
-@media(min-width:1024px) {
+@media (max-width:480px){
 
     .sub-con{
         .page-view{
@@ -15,29 +14,28 @@
                 padding: 50px 0;
                 background-color: #1F5054;
                 .collection-title{
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    max-width: 2200px;
-                    padding: 0 100px;
-
+                    width: 100%;
+                    margin: auto;
                     >.left{
                         >.title{
                             font-size: 40px;
                             font-weight: bold;
                             color: white;
+                            text-align: center;
+                            padding: 20px 0;
                         }
                     }
         
                     >.right{
                         >ul{
-                            width: 700px;
+                            width: 100%;
                             display: flex;
+                            justify-content: center;
                             flex-wrap: wrap;
                             >li{
                                 
                                 padding: 10px 0;
-                                width: 50%;
+                                width: 40%;
                                 display: flex;
                                 >p{
                                     width: 100px;
@@ -46,6 +44,8 @@
                                     font-weight: bold;
                                 }
                                 >span{
+                                    display: block;
+                                    width: 60%;
                                     color: white;
                                     font-size: 14px;
                                     font-weight: 600;
@@ -59,9 +59,9 @@
             .img-box{
                 overflow: hidden;
                 width: 100%;
-                height: 900px;
+                height: 450px;
                 background-color: rgb(163, 163, 163);
-                margin-bottom: 100px;
+                margin-bottom: 50px;
                 position: relative;
                 .bg-img{
                     width: 100%;
@@ -88,12 +88,14 @@
                     }
                 }
                 .img-print{
+
                     height: 100%;
                     position: absolute;
                     top: 0;
                     left: 50%;
                     transform: translateX(-50%);
                     >img{
+
                         height: 100%;
                         margin: auto;
                         display: block;
@@ -108,7 +110,6 @@
                 padding: 70px 0;
                 .different-collections{
                     @include main-width-auto();
-    
                     .title{
                         position: relative;
                         @include h3(){
@@ -213,10 +214,3 @@
     }
 
 }
-
-
-
-@import "_t-collections-click";
-@import "_t-inc";
-@import "_m-collections-click";
-@import "_m-inc";

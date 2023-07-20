@@ -1,8 +1,9 @@
 @import "_reset";
 @import "_mixin";
-@import "_inc";
 
-@include sub-header();
+@media (max-width:480px){
+
+    @include sub-header();
 
 .sub-con{
     .page-view{
@@ -33,20 +34,24 @@
 
         .sub-con-box1{
 
-
             .search-box{
-                @include flex(space-between,center);
                 padding-bottom: 20px;
                 border-bottom: 1px solid #e0e0e0;
+                display: block;
+                padding: 0 15px;
                 .left{
-                    @include flex(space-between,center);
+                    flex-wrap: wrap;
+                    width: 100%;
+                    margin-bottom: 10px;
+                    justify-content: flex-start;
                     .form-box{
                         form{
                             select{
+                                width: 150px;
                                 appearance: none;
-                                margin-right: 15px;
+                                margin-right: 5px;
                                 height: 48px;
-                                padding: 0 42px 0 24px;
+                                padding: 0 20px 0 14px;
                                 color: #666;
                                 font-size: 16px;
                                 border: 1px solid #bdbdbd;
@@ -54,6 +59,7 @@
                                 background-repeat: no-repeat;
                                 background-position: right 18px center;
                                 background-size: 10px;
+                                margin-bottom: 10px;
                                 option{
 
                                 }
@@ -72,6 +78,7 @@
                             font-size: 16px;
                             padding: 0 24px;
                             position: relative;
+                            margin-bottom: 10px;
                             &::before{
                                 content: '';
                                 display: inline-block;
@@ -91,7 +98,7 @@
                     .search-box2{
                         position: relative;
                         input{
-                            width: 280px;
+                            width: 100%;
                             height: 48px;
                             outline: none;
                             padding: 0 20px;
@@ -125,11 +132,10 @@
             .img-box{
                 padding-top: 30px;
                 ul{
-                    display: flex;
-                    flex-wrap: wrap;
+                    display: block;
                     
                     li{
-                        width: 50%;
+                        width: 100%;
 
                         a{
                             display: block;
@@ -197,8 +203,5 @@
         }
     }
 
+}
 
-    @import "_t-permanent-exhibition";
-    @import "_t-inc";
-    @import "_m-permanent-exhibition";
-    @import "_m-inc";
