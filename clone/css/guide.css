@@ -532,6 +532,11 @@ table {
   }
 }
 @media (min-width: 481px) and (max-width: 1023px) {
+  .header.on {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
   .header {
     background-color: white;
     position: fixed;
@@ -1136,6 +1141,11 @@ table {
   }
 }
 @media (min-width: 481px) and (max-width: 1023px) {
+  .header.on {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
   .header {
     background-color: white;
     position: fixed;
@@ -2414,6 +2424,11 @@ table {
   }
 }
 @media (min-width: 481px) and (max-width: 1023px) {
+  .header.on {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
   .header {
     background-color: white;
     position: fixed;
