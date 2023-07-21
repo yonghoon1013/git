@@ -335,6 +335,11 @@ table {
   border: 1px solid rgba(255, 255, 255, 0.1);
   cursor: pointer;
   z-index: 99;
+  transition: all 0.2s ease-in;
+  transform: scale(1);
+}
+.footer .footer-con .scroll-top.none {
+  transform: scale(0);
 }
 
 .header {
