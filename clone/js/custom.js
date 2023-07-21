@@ -1,8 +1,8 @@
-
+  
 // 박물관 새소식 스와이퍼
 var swiper = new Swiper('.first-swiper', {
   loop: true,
-  slidesPerView: 3,
+  slidesPerView: 1,
 
   spaceBetween: 30,
   navigation: {
@@ -12,7 +12,7 @@ var swiper = new Swiper('.first-swiper', {
   breakpoints: {
     1024:{
       slidesPerView: 3,
-      spaceBetween: 100,
+      spaceBetween: 50,
     }
   },
 
