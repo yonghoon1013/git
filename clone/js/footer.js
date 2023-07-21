@@ -12,7 +12,14 @@ function scroll2(){
   } else{
     topBtn.classList.remove('none');
   }
+}
 
+let y = pageYOffset; //scrollY
+
+if(y < 160){
+  topBtn.classList.add('none');
+} else{
+  topBtn.classList.remove('none');
 }
 
 topBtn.addEventListener('click',scroll);
