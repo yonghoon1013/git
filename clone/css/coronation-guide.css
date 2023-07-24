@@ -1012,6 +1012,7 @@ table {
     top: 50%;
     right: 18px;
     transform: translateY(-50%);
+    transition: 0.3s;
   }
   .header .ham-drop-box .ham-drop > li > .on {
     color: #1f5153;
@@ -1019,15 +1020,6 @@ table {
   .header .ham-drop-box .ham-drop > li > .on::after {
     content: "";
     background-image: url("../img/icon-angle_down_green.svg");
-    width: 20px;
-    height: 20px;
-    background-size: 12px;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: 18px;
     transform: translateY(-50%) rotate(180deg);
   }
   .header .ham-drop-box .ham-drop > li ul {
@@ -1618,6 +1610,7 @@ table {
     top: 50%;
     right: 18px;
     transform: translateY(-50%);
+    transition: 0.3s;
   }
   .header .ham-drop-box .ham-drop > li > .on {
     color: #1f5153;
@@ -1625,15 +1618,6 @@ table {
   .header .ham-drop-box .ham-drop > li > .on::after {
     content: "";
     background-image: url("../img/icon-angle_down_green.svg");
-    width: 20px;
-    height: 20px;
-    background-size: 12px;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: 18px;
     transform: translateY(-50%) rotate(180deg);
   }
   .header .ham-drop-box .ham-drop > li ul {
