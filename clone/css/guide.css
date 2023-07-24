@@ -544,8 +544,6 @@ table {
   }
   .header {
     background-color: white;
-    position: fixed;
-    top: 0;
     z-index: 16;
     width: 100%;
   }
@@ -1153,8 +1151,6 @@ table {
   }
   .header {
     background-color: white;
-    position: fixed;
-    top: 0;
     z-index: 16;
     width: 100%;
   }
@@ -2436,8 +2432,6 @@ table {
   }
   .header {
     background-color: white;
-    position: fixed;
-    top: 0;
     z-index: 16;
     width: 100%;
   }
