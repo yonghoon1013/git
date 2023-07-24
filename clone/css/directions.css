@@ -566,6 +566,9 @@ table {
   .sub-con .con-box .sub-con-box1 .map-box .load-info .info-left .review-box > .star {
     font-size: 12px;
   }
+  .sub-con .con-box .sub-con-box1 .map-box .load-info .info-left .review-box > .star > i {
+    color: rgb(255, 149, 28);
+  }
   .sub-con .con-box .sub-con-box1 .map-box .load-info .info-left .review-box > a {
     font-size: 12px;
     color: #1a73e8;

@@ -3,7 +3,6 @@
 var swiper = new Swiper('.first-swiper', {
   loop: true,
   slidesPerView: 1,
-
   spaceBetween: 30,
   navigation: {
     prevEl: '.swiper-button-prev',
