@@ -1,7 +1,7 @@
 
 
 function colClick(){
-    let colStorageNum =  localStorage.getItem("num");
+    let colStorageNum =  sessionStorage.getItem("num");
 
     fetch('./json/data.json')
     .then(res => { return res.json()}) // 한줄일땐 (),{]생략가능 근데 {}쓸땐 return시켜줘야함 안쓰면 필없

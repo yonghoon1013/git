@@ -92,7 +92,9 @@ window.addEventListener('scroll',bgScroll);
 
         itemLink.forEach(function(v,k){
           v.onclick = function(e){
-            localStorage.setItem("num",k)
+            //localStorage.setItem("num",k) 로컬은 창닫아도 값남아있어서
+            // 창닫으면 값지워지는 세션으로 변경하였음
+            sessionStorage.setItem("num",k)
           }
         })
       
